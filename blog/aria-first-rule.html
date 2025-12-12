@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>The First Rule of ARIA — Use Native HTML | Accessible-UI</title>
+
+    <meta name="description" content="Learn why native HTML elements should always be used instead of ARIA roles. A clear explanation of the First Rule of ARIA with examples.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+
+    
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://accessible-ui.com/blog/aria-first-rule/">
+    
+
+    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/blog/aria-first-rule/">
+    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/blog/aria-first-rule/">
+    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/blog/aria-first-rule/">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <meta property="og:title" content="The First Rule of ARIA — Use Native HTML | Accessible-UI">
+    <meta property="og:description" content="Learn why native HTML elements should always be used instead of ARIA roles. A clear explanation of the First Rule of ARIA with examples.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accessible-ui.com/blog/aria-first-rule/">
+    <meta property="og:image" content="https://accessible-ui.com/assets/images/blog/aria-first-rule/title.jpg">
+
+</head>
+<body>
+    <header class="header">
+    <div class="container headerLayout">
+        
+    
+
+
+        <div class="logo">
+            <a
+                href="/"
+                class="logo-link"
+                aria-label="accessible-ui: Homepage"
+            >accessible-ui</a>
+        </div>
+
+
+        
+        
+        
+        
+
+        <nav class="headerNav" aria-label="Main">
+            <ul class="headerNav-list">
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/components/"
+                       
+                       >Components</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/services/"
+                        
+                       >Services</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/blog/"
+                        
+                       >Blog</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">EN</span>
+        
+
+        
+            <a href="/ua/blog/aria-first-rule/"
+               hreflang="uk"
+               lang="uk"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Switch to Ukrainian version"
+               title="Switch to Ukrainian version"
+           >UA</a>
+        
+    </div>
+</div>
+    </div>
+</header>
+
+
+    <main>
+        
+<section class="section">
+    <div class="container article">
+        <h1 class="article-heading">The First Rule of ARIA</h1>
+        <div class="article-images">
+            <img
+                src="/assets/images/blog/aria-first-rule/title.jpg"
+                alt="Comparison of an incorrect example with div role=&#39;list&#39; and a correct example using semantic ul/li tags"
+                class="article-image"
+            >
+        </div>
+        <p class="article-intro">Accessibility issues are often addressed by adding ARIA roles, states, and properties. But it’s important to remember the First Rule of ARIA.</p>
+
+        <h2 class="article-h2">The First Rule of ARIA:</h2>
+        <p class="article-text">If you can use a native HTML element with built-in semantics, use it instead of adding ARIA attributes or roles.</p>
+        <p class="article-text">For example, as shown in the image, if it’s a list — use the ul and li tags, not a div with the roles &#39;list&#39; and &#39;listitem&#39;.</p>
+        <p class="article-text">Sometimes developers avoid semantic elements because these tags have default styles. To avoid overriding these styles in CSS, some choose the faster option — adding an ARIA role to a div. However, this is the wrong approach from an accessibility standpoint. Do not neglect semantic tags. It’s better to write a few additional lines of CSS.</p>
+        <p class="article-text">Accessibility is a priority.</p>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="section section-even">
+    <div class="container">
+        <h2 class="section-heading">Want to Improve Your Site’s Accessibility?</h2>
+        <p class="section-description">Request a consultation to briefly describe your project, goals, and current challenges. We’ll help you determine the most effective next step.</p>
+
+        
+            <div class="section-buttons">
+                <a href="#" class="button buttonPrimary">Request Consultation</a>
+            </div>
+        
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-topContent">
+            <div>
+                
+    
+
+
+        <div class="logo">
+            <a
+                href="/"
+                class="logo-link"
+                aria-label="accessible-ui: Homepage"
+            >accessible-ui</a>
+        </div>
+
+
+                <div class="footer-slogan">Make accessible UI</div>
+
+                <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">EN</span>
+        
+
+        
+            <a href="/ua/blog/aria-first-rule/"
+               hreflang="uk"
+               lang="uk"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Switch to Ukrainian version"
+               title="Switch to Ukrainian version"
+           >UA</a>
+        
+    </div>
+</div>
+            </div>
+
+            <div class="footer-topRightContent">
+
+                
+                
+                
+                
+
+                <nav class="footerNav" aria-label="Footer navigation">
+                    <span aria-hidden="true">Navigation</span>
+                    <ul class="footerNav-list">
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/components/"
+                               
+                               >Components</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/services/"
+                               
+                               >Services</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/blog/"
+                               
+                               >Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="footerNav" aria-label="Legal navigation">
+
+                    
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Legal</span>
+                    <ul>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/privacy-policy/"
+                                
+                            >Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/cookie-policy/"
+                                
+                            >Cookie Policy</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/terms-of-service/"
+                                
+                            >Terms of Service</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/legal_information/"
+                                
+                            >Legal Information</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-copyrights">&copy; 2025 accessible-ui. All rights reserved.</div>
+    </div>
+</footer>
+
+
+    <section
+    id="cookie-banner"
+    class="cookieBanner"
+    role="region"
+    aria-label="Cookie usage notification"
+>
+    <div class="container cookieBanner-content">
+        <p>
+            This site uses strictly necessary cookies. By continuing, you agree to our 
+            <a
+                href="/cookie-policy/"
+            >Cookie Policy</a>.
+          </p>
+          <button
+            id="cookie-ok-btn"
+            class="button buttonPrimary cookieBanner-button"
+            aria-label="Dismiss the cookie usage notification"
+          >
+            OK
+          </button>
+    </div>
+</section>
+
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
