@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Перше правило ARIA — пишіть нативний HTML | Accessible-UI</title>
+    <title>Accessible-UI: Консультування з вебдоступності</title>
 
-    <meta name="description" content="Дізнайтеся, чому замість ролей ARIA завжди слід використовувати нативні елементи HTML. Чітке пояснення першого правила ARIA з прикладами.">
+    <meta name="description" content="Послуги з вебдоступності щодо виявлення проблем, покращення зручності сайту та відповідності WCAG. Огляд, аудит та зрозумілий план дій.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1e3a8a">
 
     
         <meta name="robots" content="index, follow">
-        <link rel="canonical" href="https://accessible-ui.com/ua/blog/aria-first-rule/">
+        <link rel="canonical" href="https://accessible-ui.com/ua/services/">
     
 
-    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/blog/aria-first-rule/">
-    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/blog/aria-first-rule/">
-    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/blog/aria-first-rule/">
+    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/services/">
+    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/services/">
+    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/services/">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -28,11 +28,11 @@
     <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <meta property="og:title" content="Перше правило ARIA — пишіть нативний HTML | Accessible-UI">
-    <meta property="og:description" content="Дізнайтеся, чому замість ролей ARIA завжди слід використовувати нативні елементи HTML. Чітке пояснення першого правила ARIA з прикладами.">
+    <meta property="og:title" content="Accessible-UI: Консультування з вебдоступності">
+    <meta property="og:description" content="Послуги з вебдоступності щодо виявлення проблем, покращення зручності сайту та відповідності WCAG. Огляд, аудит та зрозумілий план дій.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://accessible-ui.com/ua/blog/aria-first-rule/">
-    <meta property="og:image" content="https://accessible-ui.com/assets/images/blog/aria-first-rule/title.jpg">
+    <meta property="og:url" content="https://accessible-ui.com/ua/services/">
+    <meta property="og:image" content="https://accessible-ui.com/assets/images/og-image.jpg">
 
 </head>
 <body>
@@ -67,9 +67,9 @@
                 </li>
                 <li>
                     <a
-                       class="headerNav-link"
+                       class="headerNav-link headerNav-link--current"
                        href="/ua/services/"
-                        
+                        aria-current="page"
                        >Сервіси</a>
                 </li>
                 <li>
@@ -90,7 +90,7 @@
         
 
         
-            <a href="/blog/aria-first-rule/"
+            <a href="/services/"
                hreflang="en"
                lang="en"
                class="langSwitcher-item langSwitcher-link"
@@ -110,25 +110,54 @@
 
     <main>
         
+
+
+
 <section class="section">
-    <div class="container article">
-        <h1 class="article-heading">Перше правило ARIA</h1>
-        <div class="article-images">
-            <img
-                src="/assets/images/blog/aria-first-rule/title.jpg"
-                alt="Порівняння некоректного прикладу з div role=&#39;list&#39; і правильного прикладу з семантичними тегами ul/li"
-                class="article-image"
-            >
-        </div>
-        <p class="article-intro">Часто проблеми вебдоступності вирішуються додаванням ARIA (ролей, станів та властивостей). Та варто пам’ятати Перше правило ARIA (The first rule of ARIA).</p>
+    <div class="container">
+        <h1 class="section-heading">Послуги з вебдоступності</h1>
+        <p class="section-description">Ми допомагаємо командам знаходити, розуміти та виправляти проблеми вебдоступності на вже існуючих сайтах. Наш фокус — практичний результат: чіткі висновки, реалістичні рекомендації та зрозумілий шлях до відповідності WCAG.</p>
 
-        <h2 class="article-h2">Перше правило ARIA:</h2>
-        <p class="article-text">Якщо ви можете використати нативний HTML-елемент із вже вбудованою семантикою, використовуйте його замість додавання ARIA-атрибутів чи ролей.</p>
-        <p class="article-text">Наприклад, як показано на зображенні, якщо це список — використовуйте теги ul та li, а не div з ролями &#39;list&#39; і &#39;listitem&#39;.</p>
-        <p class="article-text">Часом розробники не використовують семантичні теги, тому що ці теги мають стилі за замовчуванням. Щоб не перевизначати ці стилі в CSS, дехто обирає швидший варіант — додати ARIA роль до div. Однак це хибний шлях з точки зору вебдоступності. Не варто нехтувати семантичними тегами. Краще написати декілька додаткових рядків коду в CSS.</p>
-        <p class="article-text">Доступність — це пріоритет.</p>
+        
     </div>
+</section>
 
+<section class="section section-even">
+    <div class="container">
+        <h2 class="section-heading">Варіанти співпраці</h2>
+        <div class="section-cards">
+            <div class="section-card sectionCard sectionCard--plan">
+                <h3 class="sectionCard-heading">Консультація</h3>
+                <ul class="sectionCard-list">
+                    <li>Відповіді на питання з вебдоступності</li>
+                    <li>Пояснення вимог WCAG</li>
+                    <li>Рекомендації під ваш проєкт</li>
+                    <li>Уточнення рішень щодо доступності</li>
+                </ul>
+            </div>
+
+            <div class="section-card sectionCard sectionCard--plan">
+                <h3 class="sectionCard-heading">Перевірка</h3>
+                <ul class="sectionCard-list">
+                    <li>Перевірка окремих сторінок або компонентів</li>
+                    <li>Виявлення ключових проблем доступності</li>
+                    <li>Практичні рекомендації щодо покращень</li>
+                    <li>Фокус на найважливіших виправленнях</li>
+                </ul>
+            </div>
+
+            <div class="section-card sectionCard sectionCard--plan">
+                <h3 class="sectionCard-heading">Аудит</h3>
+                <ul class="sectionCard-list">
+                    <li>Повний аудит вебдоступності сайту</li>
+                    <li>Перевірка відповідності WCAG</li>
+                    <li>Детальні рекомендації та пояснення</li>
+                    <li>Чіткі рекомендації щодо виправлень</li>
+                </ul>
+            </div>
+        </div>
+        <p class="section-disclaimer">Вартість залежить від складності та кількості сторінок сайту. Пишіть — обговоримо ваш проєкт.</p>
+    </div>
 </section>
 
 
@@ -136,12 +165,10 @@
 
 
 
-
-
-<section class="section section-even">
+<section class="section ">
     <div class="container">
-        <h2 class="section-heading">Хочете покращити доступність вашого сайту?</h2>
-        <p class="section-description">Залиште запит на консультацію, коротко описавши свій проєкт, цілі та поточні виклики. Ми допоможемо визначити оптимальний наступний крок.</p>
+        <h2 class="section-heading">Готові розпочати?</h2>
+        <p class="section-description">Не впевнені, який сервіс підійде саме вам? Залиште запит на консультацію, коротко описавши свій проєкт, цілі та поточні виклики. Ми допоможемо визначити оптимальний наступний крок.</p>
 
         
             <div class="section-buttons">
@@ -181,7 +208,7 @@
         
 
         
-            <a href="/blog/aria-first-rule/"
+            <a href="/services/"
                hreflang="en"
                lang="en"
                class="langSwitcher-item langSwitcher-link"
@@ -200,11 +227,13 @@
             <div class="footer-topRightContent">
 
                 
-                
-                
-                
 
                 <nav class="footerNav" aria-label="Навігація в підвалі">
+
+                    
+                    
+                    
+
                     <span aria-hidden="true">Навігація</span>
                     <ul class="footerNav-list">
                         <li>
@@ -216,9 +245,9 @@
                         </li>
                         <li>
                             <a
-                               class="footerNav-link"
+                               class="footerNav-link footerNav-link--current"
                                href="/ua/services/"
-                               
+                               aria-current="page"
                                >Сервіси</a>
                         </li>
                         <li>
