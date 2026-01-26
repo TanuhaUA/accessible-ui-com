@@ -89,10 +89,6 @@ ol {
   list-style: none;
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
   min-height: 100vh;
   display: flex;
@@ -155,6 +151,19 @@ img {
   display: inline-block;
   max-width: 100%;
   height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  margin: var(--spacing-md);
+  text-align: center;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  position: static;
 }
 
 .icon {
