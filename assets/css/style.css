@@ -408,6 +408,11 @@ h1.section-heading {
   margin-bottom: var(--spacing-sm);
 }
 
+.sectionCard-buttons {
+  align-self: center;
+  margin-top: var(--spacing-md);
+}
+
 .section-disclaimer {
   margin-top: var(--spacing-2xl);
   color: var(--color-text-secondary);
