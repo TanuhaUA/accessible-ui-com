@@ -43,6 +43,7 @@
   --font-size-h1: 3rem;
   --font-size-h2: 2.25rem;
   --font-size-h3: 1.5rem;
+  --font-size-h4: 1.125rem;
   --font-size-body-lg: 1.125rem;
   --font-size-body-md: 1rem;
   --font-size-body-sm: 0.875rem;
@@ -488,6 +489,8 @@ h1.section-heading {
 
 .article-intro,
 .article-h2,
+.article-h3,
+.article-h4,
 .article-text,
 .article-list {
   margin-bottom: var(--spacing-lg);
@@ -504,6 +507,14 @@ h1.section-heading {
 
 .article-h2 {
   font-size: var(--font-size-h2);
+}
+
+.article-h3 {
+  font-size: var(--font-size-h3);
+}
+
+.article-h4 {
+  font-size: var(--font-size-h4);
 }
 
 .article-text {
