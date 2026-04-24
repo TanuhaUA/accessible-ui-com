@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Automated vs Manual Accessibility Testing: Differences | Accessible-UI</title>
+
+    <meta name="description" content="What is the difference between automated and manual accessibility testing? Tool limitations, examples of checks, and when an audit is needed.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+
+    
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://accessible-ui.com/blog/automatic-vs-manual-accessibility-testing/">
+    
+
+    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/blog/automatic-vs-manual-accessibility-testing/">
+    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/blog/automatic-vs-manual-accessibility-testing/">
+    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/blog/automatic-vs-manual-accessibility-testing/">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <meta property="og:title" content="Automated vs Manual Accessibility Testing: Differences | Accessible-UI">
+    <meta property="og:description" content="What is the difference between automated and manual accessibility testing? Tool limitations, examples of checks, and when an audit is needed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accessible-ui.com/blog/automatic-vs-manual-accessibility-testing/">
+    <meta property="og:image" content="https://accessible-ui.com/assets/images/blog/automatic-vs-manual-accessibility-testing/title.jpg">
+
+</head>
+<body>
+    <a href="#main-content" class="button buttonPrimary skip-link">Skip to main content</a>
+
+    <header class="header">
+    <div class="container headerLayout">
+        
+    
+
+
+        <div class="logo">
+            <a
+                href="/"
+                class="logo-link"
+                aria-label="accessible-ui: Homepage"
+            >accessible-ui</a>
+        </div>
+
+
+        
+        
+        
+        
+
+        <nav class="headerNav" aria-label="Main">
+            <ul class="headerNav-list">
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/components/"
+                       
+                       >Components</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/services/"
+                        
+                       >Services</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/blog/"
+                        
+                       >Blog</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">EN</span>
+        
+
+        
+            <a href="/ua/blog/automatic-vs-manual-accessibility-testing/"
+               hreflang="uk"
+               lang="uk"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Switch to Ukrainian version"
+               title="Switch to Ukrainian version"
+           >UA</a>
+        
+    </div>
+</div>
+    </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+        
+<section class="section">
+    <div class="container article">
+        <h1 class="article-heading">Automated vs Manual Accessibility Testing: What’s the Difference</h1>
+
+        <div class="article-images">
+            <img
+                width="900"
+                src="/assets/images/blog/automatic-vs-manual-accessibility-testing/title.jpg"
+                alt="An illustration of a robot and a human working together on web accessibility testing, looking at a computer screen that displays code structure and user interface analysis."
+                class="article-image"
+            >
+        </div>
+
+        <p class="article-intro">Web accessibility is increasingly discussed in IT companies. This is driven both by changes in the legal landscape and by the growing focus on inclusivity and accessibility across different fields. In the information space, calls for equal rights and opportunities for all people are becoming more frequent.</p>
+
+        <p class="article-intro">Most teams are at least generally familiar with web accessibility. Many include accessibility of IT products as a basic requirement. One of the simplest and fastest ways to analyze a web resource for accessibility is to use automated tools. Among the most popular are Axe and Google Lighthouse.</p>
+        <p class="article-intro">On one hand, web accessibility often seems quite complex. On the other hand, after testing a website with Lighthouse, it may seem that it is not that complicated.</p>
+        <p class="article-intro">But then a question arises — is everything really that simple, and is such automated testing enough?</p>
+        <p class="article-intro">In most cases, it is not enough. That is why it is important to distinguish between automated accessibility testing and manual website testing.</p>
+        <p class="article-intro">Next, we will look at what this difference is and in which cases each type of testing is appropriate.</p>
+
+        <h2 class="article-h2">What Is Automated Accessibility Testing</h2>
+        <p class="article-text">Automated accessibility testing is the process of checking a website against accessibility criteria using automated tools. These tools analyze the code and page structure and evaluate it against those WCAG (Web Content Accessibility Guidelines) criteria that can be automated.</p>
+
+        <p class="article-intro article-list-heading">Most popular tools:</p>
+        <ul class="article-list">
+            <li>Axe by deque</li>
+            <li>Google Lighthouse</li>
+        </ul>
+
+        <p class="article-text">They are usually used in two ways.</p>
+        <p class="article-text">Google Lighthouse is built into the Google Chrome browser and is available in developer tools. Therefore, the most common approach is to run accessibility checks directly in the browser using Lighthouse. It generates a report showing issues that need improvement, as well as items that passed the check. It is a well-structured report with clear recommendations.</p>
+        <p class="article-text">The second approach is adding automated accessibility testing as a separate step in automated tests. For this, axe-core is commonly used. This way, within a standard CI/CD pipeline, regular accessibility checks are performed. This is useful and convenient because new changes are automatically tested, and the system reports if new accessibility violations appear.</p>
+
+        <p class="article-intro article-list-heading">Examples of issues that automated tools can detect:</p>
+        <ul class="article-list">
+            <li>missing alt text for images</li>
+            <li>insufficient color contrast (not in all cases)</li>
+            <li>ARIA-related issues (roles and attributes)</li>
+            <li>missing labels in forms</li>
+            <li>semantic or structural issues on the page</li>
+            <li>missing text alternatives for buttons or icon links</li>
+        </ul>
+
+        <p class="article-intro article-list-heading">Advantages of automated accessibility testing:</p>
+        <ul class="article-list">
+            <li>fast execution</li>
+            <li>easy to set up, often without specialized knowledge</li>
+            <li>integration with CI/CD pipelines</li>
+            <li>regular testing</li>
+        </ul>
+
+        <p class="article-text">Automated accessibility testing is a good first step that any team can take, even without deep expertise in accessibility.</p>
+
+        <h2 class="article-h2">Limitations of automated accessibility testing</h2>
+        <p class="article-text">Automated accessibility testing is somewhat detached from real user experience and does not always cover real interaction scenarios.</p>
+        <p class="article-text">It checks WCAG criteria that can be formalized.</p>
+        <p class="article-text">In practice, there are often cases where a WCAG requirement is formally met but functionally is not.</p>
+        <p class="article-text">For example, images must have alternative text. An automated tool detects the presence of alt text and marks the criterion as passed. However, such descriptions are often uninformative or the same generic text is used for all images as a default value.</p>
+        <p class="article-text">Automated tools do not evaluate whether the text is meaningful or correctly describes the specific image.</p>
+
+        <p class="article-text">
+            According to Axe-core developers, automated testing can detect on average about half (around 50–60%) of typical WCAG violations, as described in 
+            <a href="https://github.com/dequelabs/axe-core" target="_blank">
+                the axe-core documentation</a>.
+        </p>
+
+        <p class="article-text">Manual accessibility testing is primarily focused on usability. Unlike automated tools, humans understand context and can evaluate the real user experience.</p>
+
+        <p class="article-intro article-list-heading">Examples of issues that automated tools cannot fully detect:</p>
+        <ul class="article-list">
+            <li>keyboard navigation usability</li>
+            <li>logical focus order when navigating with the Tab key</li>
+            <li>clarity of the interface for screen reader users</li>
+            <li>logical page structure from a user perspective</li>
+            <li>correctness of element announcements</li>
+            <li>clarity and correctness of button and link texts</li>
+            <li>form states and error messaging logic</li>
+            <li>correct behavior of modals and menus</li>
+            <li>color contrast across different states (hover, focus)</li>
+        </ul>
+
+        <p class="article-text">Even if automated tools detect no major issues, the website can still remain non-functional or inaccessible to a human user.</p>
+
+        <h2 class="article-h2">What Is Manual Accessibility Testing</h2>
+        <p class="article-text">During manual accessibility testing, the main focus is on usability. Different user needs are taken into account. For example, for users with motor impairments, it is essential that the site is fully operable via keyboard, since they may not use a mouse or touchpad. The site is also tested with a screen reader to ensure that users with visual impairments can understand the structure and complete all necessary actions.</p>
+        <p class="article-text">To evaluate real interaction scenarios, contextual interpretation is usually required.</p>
+
+        <p class="article-intro article-list-heading">Manual accessibility testing typically includes:</p>
+        <ul class="article-list">
+            <li>keyboard-only navigation (without a mouse)</li>
+            <li>checking focus visibility and order</li>
+            <li>testing forms for clarity, autofill, and error handling</li>
+            <li>reviewing instructions and error messages</li>
+            <li>testing using screen readers</li>
+            <li>analyzing page structure and semantics in real usage context</li>
+            <li>checking component states (hover, click, etc.)</li>
+            <li>testing complex components (modals, multi-step forms, dropdowns)</li>
+        </ul>
+
+        <p class="article-text">One of the key aspects a human tester evaluates is whether a user can complete an intended action on the site (make a purchase, submit a contact form, apply for a job).</p>
+
+        <h2 class="article-h2">Comparison of Automated and Manual Accessibility Testing</h2>
+        <p class="article-text">Each type of accessibility testing has its strengths and limitations. The best approach is for them to complement each other, rather than forcing a choice between one or the other.</p>
+
+        <p class="article-text">
+            A comprehensive 
+            <a href="/services/">
+                accessibility audit of a website</a>
+             includes both manual testing and automated tools.
+        </p>
+
+        <p class="article-intro article-list-heading">Advantages of automated accessibility testing:</p>
+        <ul class="article-list">
+            <li>fast execution</li>
+            <li>easy implementation (often no specialized training required)</li>
+            <li>automated checks in CI/CD</li>
+            <li>regular testing</li>
+            <li>reduces the risk of oversight caused by the human factor</li>
+        </ul>
+
+        <p class="article-intro article-list-heading">Advantages of manual accessibility testing:</p>
+        <ul class="article-list">
+            <li>deep interaction analysis through contextual understanding</li>
+            <li>ability to detect subtle UX issues</li>
+            <li>testing with assistive technologies (e.g., screen readers)</li>
+        </ul>
+
+        <p class="article-text">Manual testing requires more resources. It is rare for teams to perform full manual accessibility audits every week or sprint due to time constraints. While proper manual testing requires knowledge and experience, basic checks can still be performed by the team without deep expertise.</p>
+
+        <h2 class="article-h2">The optimal approach is a combination of automated and manual accessibility testing</h2>
+        <p class="article-text">These two approaches do not compete with each other but rather complement one another.</p>
+        <p class="article-text">Accessibility audits combine manual testing with automated tools.</p>
+
+        <p class="article-text">Development teams are encouraged to implement regular automated accessibility testing. This can be done either as a separate step using Lighthouse or as part of automated test execution. This helps prevent the release of common accessibility issues.</p>
+        <p class="article-text">Full manual accessibility testing can be performed less frequently, ideally before launching a new product and after significant design or functionality changes.</p>
+        <p class="article-text">If your website has never been audited for accessibility, a comprehensive audit can provide a complete picture of its accessibility status.</p>
+
+        <p class="article-text">
+            Read more about 
+            <a href="/blog/who-needs-a-web-accessibility-audit/">
+                who needs an accessibility audit</a>
+             in our article.
+        </p>
+
+        <p class="article-text">Some checks can be performed by the team independently, while a comprehensive audit helps identify deeper issues.</p>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="section section-even">
+    <div class="container">
+        <h2 class="section-heading">Want to improve your website’s accessibility?</h2>
+        <p class="section-description">Submit a request with a brief description of your project and goals, and we’ll get in touch.</p>
+
+        
+            <div class="section-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpNEkNWxuvV33mI-D6VDWckGbxWMpSt8e2FhGLxWt_z8IxVw/viewform?usp=dialog" class="button buttonPrimary" target="_blank">Submit a request</a>
+            </div>
+        
+    </div>
+</section>
+
+
+<section class="section ">
+    <div class="container">
+        <h2 class="section-heading">Our services</h2>
+        <div class="section-cards">
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Accessible UI components</h3>
+                <p class="sectionCard-description">Reusable, accessible UI components built with semantic HTML, keyboard support, and screen reader compatibility.</p>
+                <a
+                    href="/components/"
+                    class="button buttonSecondary sectionCard-button"
+                >View components</a>
+            </div>
+
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Accessibility Services</h3>
+                <p class="sectionCard-description">Practical accessibility audits, consultations, and support for product teams, designers, and developers</p>
+                <a
+                    href="/services/"
+                    class="button buttonSecondary sectionCard-button"
+                >Explore our services</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-topContent">
+            <div>
+                
+    
+
+
+        <div class="logo">
+            <a
+                href="/"
+                class="logo-link"
+                aria-label="accessible-ui: Homepage"
+            >accessible-ui</a>
+        </div>
+
+
+                <div class="footer-slogan">Make accessible UI</div>
+
+                <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">EN</span>
+        
+
+        
+            <a href="/ua/blog/automatic-vs-manual-accessibility-testing/"
+               hreflang="uk"
+               lang="uk"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Switch to Ukrainian version"
+               title="Switch to Ukrainian version"
+           >UA</a>
+        
+    </div>
+</div>
+            </div>
+
+            <div class="footer-topRightContent">
+
+                
+
+                <nav class="footerNav" aria-label="Footer navigation">
+
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Navigation</span>
+                    <ul class="footerNav-list">
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/components/"
+                               
+                               >Components</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/services/"
+                               
+                               >Services</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/blog/"
+                               
+                               >Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="footerNav" aria-label="Legal navigation">
+
+                    
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Legal</span>
+                    <ul>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/privacy-policy/"
+                                
+                            >Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/cookie-policy/"
+                                
+                            >Cookie Policy</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/terms-of-service/"
+                                
+                            >Terms of Service</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/legal_information/"
+                                
+                            >Legal Information</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-copyrights">&copy; accessible-ui | All rights reserved</div>
+    </div>
+</footer>
+
+
+    <section
+    id="cookie-banner"
+    class="cookieBanner"
+    role="region"
+    aria-label="Cookie usage notification"
+>
+    <div class="container cookieBanner-content">
+        <p>
+            This site uses strictly necessary cookies. By continuing, you agree to our 
+            <a
+                href="/cookie-policy/"
+            >Cookie Policy</a>.
+          </p>
+          <button
+            id="cookie-ok-btn"
+            class="button buttonPrimary cookieBanner-button"
+            aria-label="Dismiss the cookie usage notification"
+          >
+            OK
+          </button>
+    </div>
+</section>
+
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

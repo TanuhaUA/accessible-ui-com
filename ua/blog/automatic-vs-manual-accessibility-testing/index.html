@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Автоматичне та ручне тестування вебдоступності: різниця | Accessible-UI</title>
+
+    <meta name="description" content="У чому різниця між автоматичним і ручним тестуванням вебдоступності? Обмеження інструментів, приклади перевірок і коли потрібен аудит.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+
+    
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://accessible-ui.com/ua/blog/automatic-vs-manual-accessibility-testing/">
+    
+
+    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/blog/automatic-vs-manual-accessibility-testing/">
+    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/blog/automatic-vs-manual-accessibility-testing/">
+    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/blog/automatic-vs-manual-accessibility-testing/">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <meta property="og:title" content="Автоматичне та ручне тестування вебдоступності: різниця | Accessible-UI">
+    <meta property="og:description" content="У чому різниця між автоматичним і ручним тестуванням вебдоступності? Обмеження інструментів, приклади перевірок і коли потрібен аудит.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accessible-ui.com/ua/blog/automatic-vs-manual-accessibility-testing/">
+    <meta property="og:image" content="https://accessible-ui.com/assets/images/blog/automatic-vs-manual-accessibility-testing/title.jpg">
+
+</head>
+<body>
+    <a href="#main-content" class="button buttonPrimary skip-link">Перейти до основного контенту</a>
+
+    <header class="header">
+    <div class="container headerLayout">
+        
+    
+
+
+        <div class="logo">
+            <a
+                href="/ua/"
+                class="logo-link"
+                aria-label="accessible-ui: Головна сторінка"
+            >accessible-ui</a>
+        </div>
+
+
+        
+        
+        
+        
+
+        <nav class="headerNav" aria-label="Основна">
+            <ul class="headerNav-list">
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/components/"
+                       
+                       >Компоненти</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/services/"
+                        
+                       >Сервіси</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/blog/"
+                        
+                       >Блог</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <a href="/blog/automatic-vs-manual-accessibility-testing/"
+               hreflang="en"
+               lang="en"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Перейти на англійську версію"
+               title="Перейти на англійську версію"
+            >EN</a>
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">UA</span>
+        
+    </div>
+</div>
+    </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+        
+<section class="section">
+    <div class="container article">
+        <h1 class="article-heading">Автоматичне та ручне тестування вебдоступності: у чому різниця</h1>
+
+        <div class="article-images">
+            <img
+                width="900"
+                src="/assets/images/blog/automatic-vs-manual-accessibility-testing/title.jpg"
+                alt="Ілюстрація людини та робота, які разом тестують вебдоступність, дивлячись на екран комп&#39;ютера, де показано аналіз структури коду та інтерфейсу."
+                class="article-image"
+            >
+        </div>
+
+        <p class="article-intro">Питання вебдоступності сайтів все активніше обговорюється в ІТ-компаніях. Цьому сприяють і зміни в юридичному аспекті, і поширення теми інклюзивності та доступності в різних сферах. У інформаційному просторі дедалі частіше лунають заклики до забезпечення рівних прав та можливостей для всіх людей.</p>
+
+        <p class="article-intro">Більшість команд, принаймні поверхово, знайомі з вебдоступністю. Багато команд додають доступність ІТ-продуктів до базових вимог. А одним із найпростіших і найшвидших способів аналізу вебресурсу на доступність є використання автоматизованих інструментів. Зокрема, серед найпопулярніших є Axe та Google Lighthouse.</p>
+        <p class="article-intro">З одного боку, тема вебдоступності часто здається доволі складною. З іншого боку, після тестування сайту за допомогою Lighthouse може скластися враження, що не так це й складно.</p>
+        <p class="article-intro">Але потім може виникнути запитання — чи дійсно все так просто і чи достатньо такої автоматичної перевірки?</p>
+        <p class="article-intro">У більшості випадків цього недостатньо. Тому варто розрізняти перевірку вебдоступності за допомогою автоматичних інструментів і ручну перевірку сайту.</p>
+        <p class="article-intro">Далі ми розглянемо, в чому полягає ця різниця і для яких випадків підходить той чи інший вид перевірки.</p>
+
+        <h2 class="article-h2">Що таке автоматичне тестування вебдоступності</h2>
+        <p class="article-text">Автоматичне тестування доступності — це перевірка сайту на відповідність критеріям вебдоступності за допомогою автоматизованих інструментів. Вони аналізують код і структуру сторінки та перевіряють її на відповідність частині критеріїв WCAG (Web Content Accessibility Guidelines).</p>
+
+        <p class="article-intro article-list-heading">Найпопулярніші інструменти:</p>
+        <ul class="article-list">
+            <li>Axe від deque</li>
+            <li>Google Lighthouse</li>
+        </ul>
+
+        <p class="article-text">Зазвичай їх використовують двома способами.</p>
+        <p class="article-text">Google Lighthouse вбудований в браузер Google Chrome і доступний в інструментах розробника. Тому найчастіше запускають перевірку сторінок в браузері через Lighthouse. Він формує звіт, де вказано моменти, які слід покращити, а також пункти, які успішно пройшли перевірку. Це доволі структурований звіт зі зрозумілими рекомендаціями.</p>
+        <p class="article-text">Другий спосіб — це додавання автоматичного тестування вебдоступності окремим кроком до автотестів. Зокрема для цього використовують axe-core. Таким чином в звичайному циклі CI/CD відбуваються регулярні перевірки доступності продукту. Це корисно і зручно, оскільки нові зміни автоматично перевіряються і система повідомить, якщо з’явились нові порушення вимог вебдоступності.</p>
+
+        <p class="article-intro article-list-heading">Приклади помилок, які можуть виявити автоматизовані інструменти перевірки:</p>
+        <ul class="article-list">
+            <li>відсутність alt-текстів у зображень</li>
+            <li>недостатній контраст контенту щодо фону (однак, не у всіх випадках)</li>
+            <li>помилки з ARIA (ролі та ARIA-атрибути)</li>
+            <li>відсутність label у формах</li>
+            <li>порушення семантики або структури сторінки</li>
+            <li>відсутність текстових альтернатив у кнопок або у посилань-іконок</li>
+        </ul>
+
+        <p class="article-intro article-list-heading">У автоматизованого тестування є свої плюси:</p>
+        <ul class="article-list">
+            <li>швидкість перевірки</li>
+            <li>простота в запуску, яка часто не вимагає додаткових знань</li>
+            <li>можливість інтеграції в CI/CD</li>
+            <li>регулярність перевірок</li>
+        </ul>
+
+        <p class="article-text">Автоматична перевірка вебдоступності є хорошим першим кроком, який може зробити будь-яка команда навіть без глибокої експертизи в питаннях вебдоступності.</p>
+
+        <h2 class="article-h2">Обмеження автоматичного тестування вебдоступності</h2>
+        <p class="article-text">Автоматична перевірка доступності дещо відірвана від реального досвіду користувача і не завжди тестує реальні сценарії взаємодії.</p>
+        <p class="article-text">Перевіряються критерії WCAG, які можна формалізувати.</p>
+        <p class="article-text">У практиці часто трапляються ситуації, коли вимога WCAG формально виконана, а фактично — ні.</p>
+        <p class="article-text">Наприклад, у зображення має бути альтернативний текстовий опис. Автоперевірка бачить alt і зараховує цей критерій як успішний. Однак часто такі описи зображень є неінформативними або ж для всіх зображень на сторінці використовується однаковий опис, як значення за замовчуванням.</p>
+        <p class="article-text">Автоматизовані інструменти не перевірятимуть зрозумілість і відповідність тексту конкретному зображенню.</p>
+
+        <p class="article-text">
+            За оцінками розробників axe-core, за допомогою автоматизованої перевірки в середньому можна виявити приблизно половину (близько 50–60%) типових порушень WCAG, що описано в 
+            <a href="https://github.com/dequelabs/axe-core" target="_blank">
+                документації axe-core</a>.
+        </p>
+
+        <p class="article-text">Ручне тестування вебдоступності сайту зосереджене, перш за все, на перевірці зручності користування сайтом. На відміну від автоматизованих інструментів, людина розуміє контекст і здатна оцінити реальний досвід користувача.</p>
+
+        <p class="article-intro article-list-heading">Приклади аспектів, які автоматичні інструменти не можуть повністю перевірити:</p>
+        <ul class="article-list">
+            <li>зручність повноцінної взаємодії з клавіатури</li>
+            <li>логічність порядку фокусу при переході між елементами клавішею Tab</li>
+            <li>зрозумілість інтерфейсу для користувачів скринрідерів</li>
+            <li>логічність структури сторінки з точки зору користувача</li>
+            <li>коректність озвучки елементів</li>
+            <li>зрозумілість і коректність текстів для кнопок і посилань</li>
+            <li>різні стани форм, логічність опису помилок</li>
+            <li>правильність роботи модальних вікон і меню</li>
+            <li>контрастність кольорів для різних станів (при наведенні курсора, при фокусуванні)</li>
+        </ul>
+
+        <p class="article-text">Автоматизовані інструменти можуть не виявити суттєвих порушень критеріїв вебдоступності, але для людини сайт може залишатись нефункціональним або незручним.</p>
+
+        <h2 class="article-h2">Що таке ручне тестування вебдоступності</h2>
+        <p class="article-text">Під час ручної перевірки вебдоступності сайту основна увага зосереджена саме на зручності користування. Беруться до уваги потреби різних користувачів. Наприклад, для людей з порушенням моторики дуже важливо, щоб сайт був доступний з клавіатури, тому що людина може не використовувати мишку чи тачпад. Окремо відбувається тестування сайту за допомогою скринрідера, щоб впевнитись, що люди з порушенням зору зможуть розуміти структуру і виконувати всі необхідні дії на сторінці.</p>
+        <p class="article-text">Щоб перевірити основні сценарії взаємодії, зазвичай потрібна інтерпретація контексту.</p>
+
+        <p class="article-intro article-list-heading">Тому етап ручного тестування вебдоступності сайту включає:</p>
+        <ul class="article-list">
+            <li>перевірку навігації з клавіатури (без використання миші)</li>
+            <li>перевірку логічності та видимості фокусу</li>
+            <li>тестування форм на зрозумілість, автозаповнення, відображення помилок</li>
+            <li>аналіз інструкцій та повідомлень про помилки</li>
+            <li>тестування сторінок скринрідером</li>
+            <li>аналіз структури сторінки та семантики з урахуванням реального використання</li>
+            <li>перевірку різних станів компонентів (при наведенні курсора, при натисканні)</li>
+            <li>тестування складних компонентів (попапи, багатокрокові форми, спадні меню)</li>
+        </ul>
+
+        <p class="article-text">Один із ключових аспектів, який перевіряє людина — це можливість завершити заплановану дію на сайті (здійснити покупку, заповнити форму зворотного зв’язку, відгукнутись на вакансію).</p>
+
+        <h2 class="article-h2">Порівняння автоматичної та ручної перевірки вебдоступності</h2>
+        <p class="article-text">Кожен вид тестування доступності має свої переваги та слабкі сторони. Найкраще, коли вони доповнюють одне одного, а не змушують робити вибір на користь одного чи іншого способу перевірки.</p>
+
+        <p class="article-text">
+            Комплексний 
+            <a href="/ua/services/">
+                аудит вебдоступності сайту</a>
+             включає в себе і ручне тестування, і використання автоматизованих інструментів.
+        </p>
+
+        <p class="article-intro article-list-heading">Переваги автоматичного тестування вебдоступності:</p>
+        <ul class="article-list">
+            <li>швидкість виконання</li>
+            <li>легкість впровадження (часто не вимагає спеціалізованого навчання)</li>
+            <li>можливість автоматичних перевірок (в CI/CD)</li>
+            <li>регулярність тестування</li>
+            <li>менша ймовірність пропуску типової помилки через відсутність людського фактору</li>
+        </ul>
+
+        <p class="article-intro article-list-heading">Переваги ручного тестування доступності продукту:</p>
+        <ul class="article-list">
+            <li>глибокий аналіз взаємодії через розуміння контексту</li>
+            <li>можливість виявити непомітну проблему в UX сторінки</li>
+            <li>тестування сайту за допомогою асистивних технологій (як-от скринрідерів)</li>
+        </ul>
+
+        <p class="article-text">Ручне тестування вимагає більшої кількості ресурсів. Дуже рідко команди здійснюють повну ручну перевірку вебдоступності продукту кожного тижня чи спринту, тому що це вимагає більших витрат часу. Хоча для якісного ручного тестування доступності сторінок потрібно отримати відповідні знання, базові перевірки команда здатна виконувати і без глибокої експертизи.</p>
+
+        <h2 class="article-h2">Оптимальним підходом є комбінація автоматичного та ручного тестування вебдоступності</h2>
+        <p class="article-text">Ці два підходи не конкурують один з одним, а доповнюють одне одного.</p>
+        <p class="article-text">Аудит вебдоступності є комбінацією ручної перевірки з використанням автоматизованих інструментів.</p>
+
+        <p class="article-text">В командах розробки бажано запровадити регулярне автоматичне тестування доступності ресурсу. Або окремим етапом тестування за допомогою Lighthouse, або ж додаванням етапу під час запуску автотестів. Це допоможе запобігти релізу типових порушень вебдоступності.</p>
+        <p class="article-text">Повне ручне тестування вебдоступності можна проводити рідше. Бажано це робити перед запуском нового продукту та після суттєвих змін дизайну або функціоналу.</p>
+        <p class="article-text">Якщо ж аудит доступності вашого сайту ніколи не проводився, отримати повну картину можна за допомогою комплексного аудиту доступності.</p>
+
+        <p class="article-text">
+            Детальніше про те, 
+            <a href="/ua/blog/who-needs-a-web-accessibility-audit/">
+                кому і коли потрібен аудит вебдоступності</a>
+             можна прочитати в нашій статті.
+        </p>
+
+        <p class="article-text">Частину перевірок команда може виконувати самостійно, а комплексний аудит допомагає знайти більш глибокі проблеми.</p>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="section section-even">
+    <div class="container">
+        <h2 class="section-heading">Хочете покращити доступність вашого сайту?</h2>
+        <p class="section-description">Залиште запит із коротким описом вашого проєкту та цілей, і ми зв’яжемося з вами.</p>
+
+        
+            <div class="section-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ4vAnKpCZPWdiw1i9q_196EAkalyY5WBByV0zNHkDNV2Ryg/viewform?usp=dialog" class="button buttonPrimary" target="_blank">Залишити запит</a>
+            </div>
+        
+    </div>
+</section>
+
+
+<section class="section ">
+    <div class="container">
+        <h2 class="section-heading">Наші сервіси</h2>
+        <div class="section-cards">
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Доступні UI-компоненти</h3>
+                <p class="sectionCard-description">Доступні UI-компоненти з семантичним HTML, з підтримкою навігації з допомогою клавіатури та скринрідерів.</p>
+                <a
+                    href="/ua/components/"
+                    class="button buttonSecondary sectionCard-button"
+                >Переглянути компоненти</a>
+            </div>
+
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Послуги з вебдоступності</h3>
+                <p class="sectionCard-description">Практичні аудити доступності, консультації та супровід для продуктових команд, дизайнерів і розробників</p>
+                <a
+                    href="/ua/services/"
+                    class="button buttonSecondary sectionCard-button"
+                >Дізнатися про послуги</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-topContent">
+            <div>
+                
+    
+
+
+        <div class="logo">
+            <a
+                href="/ua/"
+                class="logo-link"
+                aria-label="accessible-ui: Головна сторінка"
+            >accessible-ui</a>
+        </div>
+
+
+                <div class="footer-slogan">Створюємо доступний UI</div>
+
+                <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <a href="/blog/automatic-vs-manual-accessibility-testing/"
+               hreflang="en"
+               lang="en"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Перейти на англійську версію"
+               title="Перейти на англійську версію"
+            >EN</a>
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">UA</span>
+        
+    </div>
+</div>
+            </div>
+
+            <div class="footer-topRightContent">
+
+                
+
+                <nav class="footerNav" aria-label="Навігація в підвалі">
+
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Навігація</span>
+                    <ul class="footerNav-list">
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/components/"
+                               
+                               >Компоненти</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/services/"
+                               
+                               >Сервіси</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/blog/"
+                               
+                               >Блог</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="footerNav" aria-label="Юридична інформація">
+
+                    
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Юридична інформація</span>
+                    <ul>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/privacy-policy/"
+                                
+                            >Політика конфіденційності</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/cookie-policy/"
+                                
+                            >Політика файлів cookie</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/terms-of-service/"
+                                
+                            >Умови надання послуг</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/legal_information/"
+                                
+                            >Юридична інформація</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-copyrights">&copy; accessible-ui | Всі права захищено</div>
+    </div>
+</footer>
+
+
+    <section
+    id="cookie-banner"
+    class="cookieBanner"
+    role="region"
+    aria-label="Повідомлення про використання файлів cookie"
+>
+    <div class="container cookieBanner-content">
+        <p>
+            Сайт використовує лише необхідні cookie. Продовжуючи, ви погоджуєтеся з 
+            <a
+                href="/ua/cookie-policy/"
+            >Політикою файлів cookie</a>.
+          </p>
+          <button
+            id="cookie-ok-btn"
+            class="button buttonPrimary cookieBanner-button"
+            aria-label="Закрити повідомлення про використання файлів cookie"
+          >
+            OK
+          </button>
+    </div>
+</section>
+
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
