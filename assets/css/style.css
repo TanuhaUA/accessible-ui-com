@@ -531,6 +531,10 @@ h1.section-heading {
   padding-left: var(--spacing-xl);
 }
 
+.article-list--decimal {
+  list-style: decimal;
+}
+
 .article-list li {
   margin-bottom: var(--spacing-sm);
 }
