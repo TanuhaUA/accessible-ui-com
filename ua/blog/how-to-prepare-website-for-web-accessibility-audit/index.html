@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Як підготувати сайт до аудиту вебдоступності | Accessible-UI</title>
+
+    <meta name="description" content="Чекліст та практичні поради: як підготувати вебресурс до аудиту доступності, визначити обсяг перевірки, надати доступи та уникнути типових помилок.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+
+    
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://accessible-ui.com/ua/blog/how-to-prepare-website-for-web-accessibility-audit/">
+    
+
+    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/blog/how-to-prepare-website-for-web-accessibility-audit/">
+    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/blog/how-to-prepare-website-for-web-accessibility-audit/">
+    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/blog/how-to-prepare-website-for-web-accessibility-audit/">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <meta property="og:title" content="Як підготувати сайт до аудиту вебдоступності | Accessible-UI">
+    <meta property="og:description" content="Чекліст та практичні поради: як підготувати вебресурс до аудиту доступності, визначити обсяг перевірки, надати доступи та уникнути типових помилок.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accessible-ui.com/ua/blog/how-to-prepare-website-for-web-accessibility-audit/">
+    <meta property="og:image" content="https://accessible-ui.com/assets/images/blog/how-to-prepare-website-for-web-accessibility-audit/title.jpg">
+
+</head>
+<body>
+    <a href="#main-content" class="button buttonPrimary skip-link">Перейти до основного контенту</a>
+
+    <header class="header">
+    <div class="container headerLayout">
+        
+    
+
+
+        <div class="logo">
+            <a
+                href="/ua/"
+                class="logo-link"
+                aria-label="accessible-ui: Головна сторінка"
+            >accessible-ui</a>
+        </div>
+
+
+        
+        
+        
+        
+
+        <nav class="headerNav" aria-label="Основна">
+            <ul class="headerNav-list">
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/components/"
+                       
+                       >Компоненти</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/services/"
+                        
+                       >Сервіси</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/blog/"
+                        
+                       >Блог</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <a href="/blog/how-to-prepare-website-for-web-accessibility-audit/"
+               hreflang="en"
+               lang="en"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Перейти на англійську версію"
+               title="Перейти на англійську версію"
+            >EN</a>
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">UA</span>
+        
+    </div>
+</div>
+    </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+        
+<section class="section">
+    <div class="container article">
+        <h1 class="article-heading">Як підготувати сайт до аудиту вебдоступності</h1>
+        
+        <div class="article-images">
+            <img
+                width="900"
+                src="/assets/images/blog/how-to-prepare-website-for-web-accessibility-audit/title.jpg"
+                alt="Ілюстрація робочого місця в світлому офісі, де людина пише в блокноті за столом. На поверхні столу розміщено ноутбук, смартфон, окуляри, колірну палітру та схематичні UI-начерки без тексту. На задньому плані видно кімнатні рослини та колег за роботою."
+                class="article-image"
+            >
+        </div>
+
+        <p class="article-intro">Що таке аудит вебдоступності, на яких сайтах варто його проводити, коли саме це слід робити, ми розглядали в попередніх статтях нашого блогу.</p>
+
+        <p class="article-intro">
+            Зокрема, ви можете ознайомитись з ними за посиланнями 
+            <a href="/ua/blog/what-is-a-website-accessibility-audit/">
+                Що таке аудит вебдоступності сайту</a>
+             та 
+            <a href="/ua/blog/who-needs-a-web-accessibility-audit/">
+                Кому потрібен аудит вебдоступності</a>.
+        </p>
+
+        <p class="article-intro">У цій статті поговоримо про те, як підготуватись до аудиту доступності, щоб він був якомога якіснішим та кориснішим.</p>
+
+        <h2 class="article-h2">Навіщо готувати сайт до аудиту</h2>
+
+        <p class="article-text">Навіщо взагалі проводити підготовку перед аудитом вебдоступності?</p>
+        <p class="article-text">Насправді, перевірити, чи сайт відповідає принципам доступності, можна і без підготовки. Однак ретельна підготовка допоможе досягти значно кращих результатів</p>
+        <p class="article-intro article-list-heading">Зокрема, підготовка до аудиту допомагає:</p>
+
+        <ul class="article-list">
+            <li>пришвидшити сам процес перевірки</li>
+            <li>отримати точніші результати</li>
+            <li>не пропустити ключові етапи шляху користувача і протестувати їх</li>
+        </ul>
+
+        <p class="article-text">Коли йдеться про підготовку, то йдеться не про виправлення можливих проблем доступності заздалегідь чи про самостійне тестування доступності сайту.</p>
+        <p class="article-text">Підготовка сайту до аудиту — це аналіз ключових сценаріїв для перевірки та визначення обсягу аудиту.</p>
+
+        <h2 class="article-h2">Визначення обсягу аудиту вебдоступності сайту</h2>
+
+        <p class="article-text">Відповідність вимогам WCAG є базовою частиною вебдоступності. Та не менш важливо, щоб користувач міг успішно пройти основні user flow та скористатися функціями сайту.</p>
+        <p class="article-text">Зазвичай у вебресурсу є певний стандартний шлях користувача. Наприклад, здійснити покупку в інтернет-магазині (шлях від вибору товару до оплати) або залишити запит на певну послугу (заповнення форми зворотного зв’язку).</p>
+
+        <p class="article-text">
+            Тому під час підготовки до 
+            <a href="/ua/services/">
+                аудиту вебдоступності сайту</a> варто прописати найважливіші сценарії користувача, а на основі цих сценаріїв визначити список сторінок та компонентів для перевірки.
+        </p>
+
+        <p class="article-text">Також варто визначитись, чи потрібно тестувати мобільну версію сайту, адже зазвичай це є окремою опцією під час аудиту.</p>
+
+        <p class="article-intro article-list-heading">Перед аудитом доступності сайту варто зрозуміти такі речі:</p>
+
+        <ul class="article-list">
+            <li>які основні сценарії користувача</li>
+            <li>які сторінки потрібно перевірити</li>
+            <li>чи потрібно перевіряти складні елементи (форми, модальні вікна, дашборди)</li>
+            <li>чи потрібен аудит вебдоступності мобільної версії сайту</li>
+        </ul>
+
+        <p class="article-text">Так буде значно простіше оцінити обсяг роботи та не пропустити важливі сценарії.</p>
+
+        <h2 class="article-h2">Підготовка списку ключових сторінок та user flow</h2>
+
+        <p class="article-text">Аудитор вебдоступності не завжди добре знає ваш продукт. З одного боку, перевірка сайту зовнішнім спеціалістом — це хороший тест також і UX сайту. З іншого боку, щоб отримати якісну перевірку вебдоступності, варто заздалегідь прописати основні кроки користувача під час стандартних сценаріїв, щоб ознайомити консультанта з вебдоступності із сайтом.</p>
+        <p class="article-text">Також це допоможе скласти детальний список сторінок для аудиту.</p>
+        <p class="article-text">Як правило, головна сторінка є першою, на яку потрапляє користувач, і тому аудит доступності головної сторінки часто є невід’ємною частиною перевірки. Утім, бувають випадки, коли трафік спрямований на конкретну сторінку товару чи послуги, і клієнт відразу переходить до оформлення замовлення. За такого сценарію головна сторінка може залишитися поза увагою відвідувачів. Тоді аудит доступності головної сторінки може мати нижчий пріоритет порівняно з перевіркою сторінки товару.</p>
+
+        <p class="article-intro article-list-heading">Типовими сторінками для перевірки вебдоступності є:</p>
+
+        <ul class="article-list">
+            <li>головна сторінка</li>
+            <li>сторінка товару</li>
+            <li>кошик</li>
+            <li>сторінка з формою оформлення замовлення</li>
+            <li>сторінка оплати</li>
+            <li>особистий кабінет</li>
+            <li>сторінка для логіну чи реєстрації</li>
+            <li>результати пошуку</li>
+        </ul>
+
+        <p class="article-text">Цей набір сторінок відрізнятиметься залежно від специфіки вашого продукту.</p>
+
+        <p class="article-intro article-list-heading">Типові елементи для перевірки доступності:</p>
+
+        <ul class="article-list">
+            <li>навігація</li>
+            <li>форма пошуку</li>
+            <li>форми для введення даних користувача</li>
+            <li>випадаючі списки і меню</li>
+            <li>графіки або візуалізація даних</li>
+            <li>галерея зображень</li>
+            <li>відеоплеєр</li>
+            <li>модальні вікна, попапи</li>
+        </ul>
+
+        <h2 class="article-h2">Підготовка доступів (за необхідності)</h2>
+
+        <p class="article-text">Вебресурс може мати декілька ролей користувачів. Якщо планується перевірка сторінок або компонентів, недоступних для незареєстрованого користувача, потрібно підготувати тестові акаунти для аудитора вебдоступності. Це ще один важливий момент, про який можна забути і який може затримати процес аудиту, коли вже в процесі виявиться, що закрито доступ до певних сценаріїв або частин сайту. Без такого доступу частина проблем може залишитись невиявленою.</p>
+        <p class="article-text">Крім того, аудит вебдоступності сайту може відбуватись на різних етапах розробки продукту. Якщо перевірка доступності запланована перед релізом і сайт ще не є публічним, то зовнішньому спеціалісту з вебдоступності потрібні будуть також доступи до тестового середовища. Процес надання такого доступу для зовнішнього консультанта може бути тривалим і вимагати погодження з різними відділами, тому про це теж варто подумати заздалегідь.</p>
+
+        <h2 class="article-h2">Перевірка доступності сайту автоматизованими інструментами</h2>
+
+        <p class="article-text">Перед аудитом вебдоступності сайту команда може перевірити сайт автоматизованими інструментами (наприклад, Lighthouse або axe). Це робити не обов’язково, адже така перевірка теж є частиною аудиту.</p>
+        <p class="article-text">Однак тут варто звернути увагу на важливий момент. Звіт автоматичної перевірки може показати, що сайт є повністю або майже доступним і може скластися враження, що подальший аудит не потрібен. Це може ввести в оману, адже автоматизовані інструменти перевірки вебдоступності не здатні виявити всіх проблем і протестувати всі сценарії та способи користування сайтом. Ручна перевірка доступності є необхідною частиною аудиту для більшості сайтів.</p>
+
+        <p class="article-text">
+            Детальніше про те, чому автоматичних перевірок недостатньо можна прочитати у нашій статті 
+            <a href="/ua/blog/automatic-vs-manual-accessibility-testing/">
+                Автоматичне та ручне тестування вебдоступності: у чому різниця</a>.
+        </p>
+
+        <h2 class="article-h2">Збір інформації про відомі проблеми</h2>
+
+        <p class="article-text">Перед аудитом дуже корисно зібрати інформацію про відомі проблеми.</p>
+        <p class="article-text">Зокрема, вже можуть бути зафіксовані скарги користувачів щодо UX або незручностей сайту. Варто дослідити відгуки користувачів на наявність у них вказівок на проблеми з доступністю.</p>
+        <p class="article-text">Також команді може бути відомо про певні проблемні сценарії. Якщо такі є, про них варто повідомити перед перевіркою сайту.</p>
+        <p class="article-text">Якщо команда розробки або продуктова команда припускає наявність порушень вебдоступності в певних місцях, їх також варто внести до списку.</p>
+
+        <p class="article-intro article-list-heading">Перед аудитом вебдоступності корисно буде зафіксувати:</p>
+
+        <ul class="article-list">
+            <li>скарги користувачів щодо доступності або незручностей на сайті</li>
+            <li>проблемні користувацькі сценарії</li>
+            <li>список складних компонентів</li>
+            <li>потенційні порушення вебдоступності, які визначила команда</li>
+        </ul>
+
+        <p class="article-text">Така підготовка допоможе приділити особливу увагу проблемним і критичним зонам.</p>
+
+        <h2 class="article-h2">Підготовка команди до результатів аудиту</h2>
+
+        <p class="article-text">Це доволі важливий етап, про який можна забути. До аудиту вебдоступності продукту зовнішнім спеціалістом часто ставляться як до екзамену. Однак аудит доступності має на меті, перш за все, покращити користувацький досвід клієнта, а не перевірити команду розробки продукту.</p>
+        <p class="article-text">Важливо розуміти, що під час аудиту майже завжди виявляються проблеми доступності навіть на сайтах, які приділяють вебдоступності велику увагу. Навіть дуже якісні сайти мають місця, які можна вдосконалити.</p>
+        <p class="article-text">Тому всім замовникам аудиту варто ставитись до перевірки доступності як до допомоги, а не до звинувачень. Саме аудит допомагає виявити приховані моменти, скласти план для подальших покращень та розставити пріоритети.</p>
+        <p class="article-text">Отже, варто пам’ятати, що метою аудиту є не “складання тесту”, а саме розуміння поточного стану доступності сайту.</p>
+
+        <h2 class="article-h2">Що НЕ потрібно робити перед аудитом</h2>
+
+        <p class="article-text">
+            Щоб 
+            <a href="/ua/services/">
+                аудит вебдоступності сайту</a>
+             показав картину реального сайту, а не демоверсії, перед аудитом НЕ потрібно:
+        </p>
+
+        <ul class="article-list">
+            <li>робити зміни в коді нашвидкоруч лише задля того, щоб сайт успішно пройшов аудит</li>
+            <li>додавати ARIA-атрибути до всіх елементів, щоб зробити їх доступнішими</li>
+            <li>орієнтуватись на результати автоматизованих інструментів перевірки доступності</li>
+            <li>приховувати сторінки або сценарії, які вважаються проблемними</li>
+        </ul>
+
+        <p class="article-text">Якісна підготовка до аудиту допоможе зробити перевірку доступності сайту ефективнішою та кориснішою.</p>
+        <p class="article-text">Якщо ви плануєте аудит вебдоступності, чекліст із запитаннями для підготовки допоможе вам отримати якісний практичний результат.</p>
+
+        <h2 class="article-h2">Чекліст перед аудитом вебдоступності</h2>
+
+        <p class="article-intro article-list-heading">Перед початком аудиту варто підготувати відповіді на такі запитання:</p>
+
+        <ul class="article-list article-list--decimal">
+            <li>Які сторінки або user flow є найважливішими для бізнесу?</li>
+            <li>Чи потрібно перевіряти тестову версію сайту чи лише продакшн-версію?</li>
+            <li>Чи потрібні тестові акаунти або доступ до закритих розділів?</li>
+            <li>Чи є складні інтерактивні компоненти (модальні вікна, випадаючі списки, віджети)?</li>
+            <li>Чи є окрема мобільна версія або окремі сценарії користувача саме для мобільного?</li>
+            <li>Чи використовує сайт сторонні віджети або інтеграції?</li>
+            <li>Чи були раніше скарги користувачів щодо доступності?</li>
+            <li>Чи є сторінки або функції, які команда вважає проблемними?</li>
+            <li>Чи є дедлайн або конкретна причина проведення аудиту (реліз, редизайн, підготовка до запуску тощо)?</li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="section section-even">
+    <div class="container">
+        <h2 class="section-heading">Хочете покращити доступність вашого сайту?</h2>
+        <p class="section-description">Залиште запит із коротким описом вашого проєкту та цілей, і ми зв’яжемося з вами.</p>
+
+        
+            <div class="section-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ4vAnKpCZPWdiw1i9q_196EAkalyY5WBByV0zNHkDNV2Ryg/viewform?usp=dialog" class="button buttonPrimary" target="_blank">Залишити запит</a>
+            </div>
+        
+    </div>
+</section>
+
+
+<section class="section ">
+    <div class="container">
+        <h2 class="section-heading">Наші сервіси</h2>
+        <div class="section-cards">
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Доступні UI-компоненти</h3>
+                <p class="sectionCard-description">Доступні UI-компоненти з семантичним HTML, з підтримкою навігації з допомогою клавіатури та скринрідерів.</p>
+                <a
+                    href="/ua/components/"
+                    class="button buttonSecondary sectionCard-button"
+                >Переглянути компоненти</a>
+            </div>
+
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Послуги з вебдоступності</h3>
+                <p class="sectionCard-description">Практичні аудити доступності, консультації та супровід для продуктових команд, дизайнерів і розробників</p>
+                <a
+                    href="/ua/services/"
+                    class="button buttonSecondary sectionCard-button"
+                >Дізнатися про послуги</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-topContent">
+            <div>
+                
+    
+
+
+        <div class="logo">
+            <a
+                href="/ua/"
+                class="logo-link"
+                aria-label="accessible-ui: Головна сторінка"
+            >accessible-ui</a>
+        </div>
+
+
+                <div class="footer-slogan">Створюємо доступний UI</div>
+
+                <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <a href="/blog/how-to-prepare-website-for-web-accessibility-audit/"
+               hreflang="en"
+               lang="en"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Перейти на англійську версію"
+               title="Перейти на англійську версію"
+            >EN</a>
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">UA</span>
+        
+    </div>
+</div>
+            </div>
+
+            <div class="footer-topRightContent">
+
+                
+
+                <nav class="footerNav" aria-label="Навігація в підвалі">
+
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Навігація</span>
+                    <ul class="footerNav-list">
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/components/"
+                               
+                               >Компоненти</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/services/"
+                               
+                               >Сервіси</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/blog/"
+                               
+                               >Блог</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="footerNav" aria-label="Юридична інформація">
+
+                    
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Юридична інформація</span>
+                    <ul>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/privacy-policy/"
+                                
+                            >Політика конфіденційності</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/cookie-policy/"
+                                
+                            >Політика файлів cookie</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/terms-of-service/"
+                                
+                            >Умови надання послуг</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/legal_information/"
+                                
+                            >Юридична інформація</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-copyrights">&copy; accessible-ui | Всі права захищено</div>
+    </div>
+</footer>
+
+
+    <section
+    id="cookie-banner"
+    class="cookieBanner"
+    role="region"
+    aria-label="Повідомлення про використання файлів cookie"
+>
+    <div class="container cookieBanner-content">
+        <p>
+            Сайт використовує лише необхідні cookie. Продовжуючи, ви погоджуєтеся з 
+            <a
+                href="/ua/cookie-policy/"
+            >Політикою файлів cookie</a>.
+          </p>
+          <button
+            id="cookie-ok-btn"
+            class="button buttonPrimary cookieBanner-button"
+            aria-label="Закрити повідомлення про використання файлів cookie"
+          >
+            OK
+          </button>
+    </div>
+</section>
+
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
