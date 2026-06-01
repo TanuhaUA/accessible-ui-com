@@ -25,6 +25,7 @@
   --spacing-3xl: 4rem;
 
   --min-width-button: 44px;
+  --max-width-section: 760px;
 
   /* Sizing */
   --size-icon-sm: 1rem;
@@ -40,10 +41,16 @@
   --font-family-code: 'Fira Code', Consolas, 'Courier New', monospace;
 
   /* Typography - Font Sizes */
-  --font-size-h1: 3rem;
-  --font-size-h2: 2.25rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1.125rem;
+  --font-size-heading1: 3rem;
+  --font-size-heading2: 2.25rem;
+  --font-size-heading3: 1.5rem;
+  --font-size-heading4: 1.125rem;
+  
+  --font-size-h1: clamp(var(--font-size-heading3), 10vw, var(--font-size-heading1));
+  --font-size-h2: clamp(var(--font-size-heading4), 8vw, var(--font-size-heading2));
+  --font-size-h3: clamp(var(--font-size-heading4), 7vw, var(--font-size-heading3));
+  --font-size-h4: clamp(1rem, 6vw, var(--font-size-heading4));
+
   --font-size-body-lg: 1.125rem;
   --font-size-body-md: 1rem;
   --font-size-body-sm: 0.875rem;
@@ -300,16 +307,23 @@ img {
   text-align: center;
 }
 
+.section-left {
+  text-align: left;
+  color: var(--color-text-secondary);
+}
+
 .section-even {
   background-color: var(--color-surface);
 }
 
-.section-even .sectionCard{
+.section-even .card,
+.section-even .sectionCard {
   background-color: var(--color-background);
 }
 
 .section-heading {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-heading);
 }
@@ -320,7 +334,7 @@ h1.section-heading {
 }
 
 .section-description {
-  max-width: 800px;
+  max-width: var(--max-width-section);
   margin: 0 auto;
   font-size: var(--font-size-body-lg);
   color: var(--color-text-secondary);
@@ -358,6 +372,23 @@ h1.section-heading {
   gap: var(--spacing-lg);
 }
 
+.cards {
+  display: flex;
+  gap: var(--spacing-xl) var(--spacing-2xl);
+  flex-wrap: wrap;
+}
+
+.cards-item {
+  flex: 1 400px;
+}
+
+.card {
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
 .sectionCard {
   display: flex;
   flex-direction: column;
@@ -365,6 +396,24 @@ h1.section-heading {
   align-items: center;
   padding: var(--spacing-lg);
   background-color: var(--color-surface);
+}
+
+.sectionCard--plan {
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 25%;
+  text-align: left;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.sectionCard--feature {
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 30%;
+  text-align: left;
+  background-color: var(--color-background);
 }
 
 .sectionCard-heading {
@@ -384,22 +433,12 @@ h1.section-heading {
   fill: var(--color-primary);
 }
 
-.sectionCard--plan {
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 25%;
-  text-align: left;
-  background-color: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.sectionCard--feature {
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 30%;
-  text-align: left;
-  background-color: var(--color-background);
+.sectionCard-list-title {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--font-size-body-lg); 
 }
 
 .sectionCard-list {
@@ -478,6 +517,10 @@ h1.section-heading {
   text-align: left;
 }
 
+.article--thin {
+  max-width: var(--max-width-section);
+}
+
 .article-heading {
   margin-bottom: var(--spacing-lg);
   text-align: left;
@@ -494,6 +537,11 @@ h1.section-heading {
 .article-text,
 .article-list {
   margin-bottom: var(--spacing-lg);
+}
+
+.article-text:last-child,
+.article-list:last-child {
+  margin-bottom: 0;
 }
 
 .article-images {
@@ -523,6 +571,7 @@ h1.section-heading {
 
 .article-list-heading {
   margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-body-lg);
 }
 
 .article-list {
@@ -537,6 +586,22 @@ h1.section-heading {
 
 .article-list li {
   margin-bottom: var(--spacing-sm);
+}
+
+.article--faq .article-h3,
+.article--faq .article-list {
+  margin-bottom: var(--spacing-sm);
+}
+
+.article-text--cards {
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.section-even .article-text--cards {
+  background-color: var(--color-background);
 }
 
 .footer {
@@ -656,6 +721,14 @@ h1.section-heading {
 @media screen and (max-width: 720px) {
   .container {
     padding: 0 var(--spacing-md);
+  }
+
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  .article-list {
+    padding-left: var(--spacing-md);
   }
 
   .blogCard {
