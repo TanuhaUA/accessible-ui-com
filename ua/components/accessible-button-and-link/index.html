@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Вебдоступний React-компонент для кнопок і посилань | Accessible-UI</title>
+
+    <meta name="description" content="React-компонент, який автоматично обирає між &amp;lt;button&amp;gt; та &amp;lt;a&amp;gt; на основі пропсів, забезпечує вебдоступність, підтримує disabled стан, клавіатурну навігацію та скринрідери.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+
+    
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://accessible-ui.com/ua/components/accessible-button-and-link/">
+    
+
+    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/components/accessible-button-and-link/">
+    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/components/accessible-button-and-link/">
+    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/components/accessible-button-and-link/">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <meta property="og:title" content="Вебдоступний React-компонент для кнопок і посилань | Accessible-UI">
+    <meta property="og:description" content="React-компонент, який автоматично обирає між &amp;lt;button&amp;gt; та &amp;lt;a&amp;gt; на основі пропсів, забезпечує вебдоступність, підтримує disabled стан, клавіатурну навігацію та скринрідери.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accessible-ui.com/ua/components/accessible-button-and-link/">
+    <meta property="og:image" content="https://accessible-ui.com/assets/images/components/buttonAndLink/buttonAndLinkComponent_ua.jpg">
+
+</head>
+<body>
+    <a href="#main-content" class="button buttonPrimary skip-link">Перейти до основного контенту</a>
+
+    <header class="header">
+    <div class="container headerLayout">
+        
+    
+
+
+        <div class="logo">
+            <a
+                href="/ua/"
+                class="logo-link"
+                aria-label="accessible-ui: Головна сторінка"
+            >accessible-ui</a>
+        </div>
+
+
+        
+        
+        
+        
+
+        <nav class="headerNav" aria-label="Основна">
+            <ul class="headerNav-list">
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/components/"
+                       
+                       >Компоненти</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/services/"
+                        
+                       >Сервіси</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/ua/blog/"
+                        
+                       >Блог</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <a href="/components/accessible-button-and-link/"
+               hreflang="en"
+               lang="en"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Перейти на англійську версію"
+               title="Перейти на англійську версію"
+            >EN</a>
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">UA</span>
+        
+    </div>
+</div>
+    </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+        
+
+
+
+
+
+
+<section class="section">
+    <div class="container">
+        <h1 class="section-heading">Вебдоступний React-компонент для кнопок і посилань</h1>
+        <p class="section-description">Кнопка чи посилання? &lt;button&gt; чи &lt;a&gt;?</p>
+        
+        
+            <p class="section-description">React-компонент, який автоматично обирає правильний HTML-елемент і забезпечує вебдоступність.</p>
+        
+        
+        
+        
+
+        
+            <div class="section-buttons">
+                
+                    <a href="https://forms.gle/nDJDB34Q2o2HoUpk7" class="button buttonPrimary">Хочу такий компонент</a>
+                
+                
+            </div>
+        
+    </div>
+</section>
+
+<section class="section section-even">
+    <div class="container article article--thin">
+        <h2 class="section-heading">Один компонент — різні сценарії</h2>
+
+        <div class="cards cards--half">
+            <div class="cards-item sectionCard sectionCard--example card">
+                <div class="sectionCard-heading">Кнопка</div>
+                <div class="screenshot">
+                    <img
+                        width="122"
+                        src="/assets/images/components/buttonAndLink/button.jpg"
+                        alt="Скриншот кнопки з текстом Open modal синього кольору."
+                    >
+                </div>
+            </div>
+            
+            <div class="cards-item sectionCard sectionCard--example card">
+                <div class="sectionCard-heading">Неактивна кнопка</div>
+                <div class="screenshot">
+                    <img
+                        width="122"
+                        src="/assets/images/components/buttonAndLink/disabled_button.jpg"
+                        alt="Скриншот неактивної кнопки з текстом Open modal блідо-синього кольору."
+                    >
+                </div>
+            </div>
+            
+            <div class="cards-item sectionCard sectionCard--example card">
+                <div class="sectionCard-heading">Посилання</div>
+                <div class="screenshot">
+                    <img
+                        width="122"
+                        src="/assets/images/components/buttonAndLink/link.jpg"
+                        alt="Скриншот посилання з текстом Contact page."
+                    >
+                </div>
+            </div>
+            
+            <div class="cards-item sectionCard sectionCard--example card">
+                <div class="sectionCard-heading">Посилання як кнопка</div>
+                <div class="screenshot">
+                    <img
+                        width="122"
+                        src="/assets/images/components/buttonAndLink/link_with_button_design.jpg"
+                        alt="Скриншот посилання з текстом My profile, яке має вигляд кнопки синього кольору."
+                    >
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container article article--thin">
+        <h2 class="section-heading">Що вміє компонент</h2>
+        
+        <ul class="article-list card">
+            <li>Автоматично обирає між &lt;button&gt; і &lt;a&gt; на основі переданих пропсів</li>
+            <li>Написаний на TypeScript і підійде для всіх сучасних проєктів</li>
+            <li>Підтримує коректну поведінку неактивного (disabled) стану</li>
+            <li>Зовнішній вигляд не залежить від функціоналу, а визначається через пропси</li>
+            <li>Підтримує додавання кастомних стилів через ваші класи</li>
+            <li>Забезпечує вебдоступність та відповідає вимогам WCAG 2.2</li>
+            <li>Підтримує керування за допомогою клавіатури та скринрідера</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section section-even">
+    <div class="container article article--thin">
+        <h2 class="section-heading">Приклади використання</h2>
+        
+        <div class="article-text card sectionCard sectionCard--left">
+            <h3 class="sectionCard-heading">Як кнопка</h3>
+            
+            <div class="sectionCard-subheading">Приклад коду</div>
+            <div class="sectionCard-code codeSnippet">
+                <pre><code>&lt;Action
+  onClick={() =&gt; {
+    // your code to open modal
+  }}
+&gt;
+  Open modal
+&lt;/Action&gt;</code></pre>
+            </div>
+
+            <div class="sectionCard-subheading">Результат (скриншот)</div>
+            <div class="sectionCard-image screenshot">
+                    <img
+                        width="122"
+                        src="/assets/images/components/buttonAndLink/button.jpg"
+                        alt="Скриншот кнопки з текстом Open modal синього кольору."
+                    >
+            </div>
+        </div>
+        
+        <div class="article-text card sectionCard sectionCard--left">
+            <h3 class="sectionCard-heading">Як неактивна кнопка</h3>
+
+            <div class="sectionCard-subheading">Приклад коду</div>
+            <div class="sectionCard-code codeSnippet">
+                <pre><code>&lt;Action
+  onClick={() =&gt; {
+    // your code to open modal
+  }}
+  disabled
+&gt;
+  Open modal
+&lt;/Action&gt;</code></pre>
+            </div>
+
+            <div class="sectionCard-subheading">Результат (скриншот)</div>
+            <div class="sectionCard-image screenshot">
+                <img
+                    width="122"
+                    src="/assets/images/components/buttonAndLink/disabled_button.jpg"
+                    alt="Скриншот неактивної кнопки з текстом Open modal блідо-синього кольору."
+                >
+            </div>
+        </div>
+        
+        <div class="article-text card sectionCard sectionCard--left">
+            <h3 class="sectionCard-heading">Як посилання</h3>
+
+            <div class="sectionCard-subheading">Приклад коду</div>
+            <div class="sectionCard-code codeSnippet">
+                <pre><code>&lt;Action
+  href=&quot;/contacts&quot;
+  target=&quot;_blank&quot;
+&gt;
+  Contact page
+&lt;/Action&gt;</code></pre>
+            </div>
+
+            <div class="sectionCard-subheading">Результат (скриншот)</div>
+            <div class="sectionCard-image screenshot">
+                <img
+                    width="122"
+                    src="/assets/images/components/buttonAndLink/link.jpg"
+                    alt="Скриншот посилання з текстом Contact page."
+                >
+            </div>
+        </div>
+        
+        <div class="article-text card sectionCard sectionCard--left">
+            <h3 class="sectionCard-heading">Як посилання з дизайном кнопки</h3>
+
+            <div class="sectionCard-subheading">Приклад коду</div>
+            <div class="sectionCard-code codeSnippet">
+                <pre><code>&lt;Action
+  href=&quot;/profile&quot;
+  variant=&quot;button&quot;
+&gt;
+  My profile
+&lt;/Action&gt;</code></pre>
+            </div>
+
+            <div class="sectionCard-subheading">Результат (скриншот)</div>
+            <div class="sectionCard-image screenshot">
+                <img
+                    width="122"
+                    src="/assets/images/components/buttonAndLink/link_with_button_design.jpg"
+                    alt="Скриншот посилання з текстом My profile, яке має вигляд кнопки синього кольору."
+                >
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+  <div class="container article article--thin">
+    <h2 class="section-heading">
+        Який тег обрати — &lt;button&gt; чи &lt;a&gt;?
+        <br>
+        Типова проблема в React-інтерфейсах
+    </h2>
+
+    <div class="article-text card">
+      <p class="article-text">Проблема вибору семантичного тегу постає в задачі “кнопка чи посилання в React”, коли посилання виглядає як кнопка, або кнопка виглядає як посилання. Коли використовувати &lt;button&gt;, а коли &lt;a&gt;?</p>
+      <p class="article-text">Існує правило, яке допомагає обирати правильно: якщо клік на інтерактивний елемент веде на іншу сторінку чи інше місце в межах сторінки, то слід використовувати тег &lt;a&gt;.</p>
+      <p class="article-text">Однак, незважаючи на це відоме правило, розробники мають дилему вибору семантичного тегу.</p>
+      <p class="article-text">Якщо помилково обрано тег &lt;button&gt; тоді, коли потрібно використовувати &lt;a&gt; для посилання, виникають перешкоди для клавіатурної навігації, а користування сайтом за допомогою скринрідера може стати значно складнішим.</p>
+      <p class="article-text">Порушення семантики HTML у кнопках і посиланнях можуть намагатись виправити за допомогою ARIA-атрибутів, однак часто це створює додаткові проблеми.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-even">
+  <div class="container article article--thin article--faq">
+    <h2 class="section-heading">Як працює компонент</h2>
+
+    <div class="article-text card">
+      <p class="article-h3"><b>Семантика</b></p>
+
+      <p class="article-list-heading">Компонент сам обирає відповідний семантичний тег:</p>
+      <ul class="article-list">
+        <li>&lt;a&gt;, якщо передано prop href, тобто за функціоналом це посилання</li>
+        <li>&lt;button&gt;, якщо передано prop onClick, тобто це кнопка за функціоналом</li>
+      </ul>
+    </div>
+
+    <div class="article-text card">
+      <p class="article-h3"><b>Зовнішній вигляд</b></p>
+
+      <p>Також окремий prop визначає зовнішній вигляд елемента. Вам не потрібно витрачати час на переписування стилів нативного HTML-елемента, а достатньо просто вказати бажаний зовнішній вигляд через один пропс. Можна отримати посилання, яке виглядає як кнопка або навпаки — кнопку, яка виглядає як посилання.</p>
+    </div>
+
+    <div class="article-text card">
+      <p class="article-h3"><b>Стилі</b></p>
+
+      <p>У компоненті реалізовано базові стилі, але існує проп, який дозволяє їх не застосовувати.</p>
+      <p>Також є можливість змінити дизайн елементів через ваші кастомні класи.</p>
+    </div>
+
+    <div class="article-text card">
+      <p class="article-h3"><b>Disabled</b></p>
+
+      <p>У компоненті реалізовано правильну роботу з disabled станом для кнопок і посилань з урахуванням вимог до вебдоступності.</p>
+    </div>
+
+    <div class="article-text card">
+      <p class="article-h3"><b>Додаткові пропси</b></p>
+
+      <p>Через окремі пропси ви можете налаштовувати властивості посилання (як-от target чи rel), а також вказувати потрібний тип кнопки (submit чи інший).</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-heading">Вебдоступність</h2>
+        <div class="section-cards">
+            <div class="section-card sectionCard sectionCard--feature">
+                <div class="sectionCard-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+                    </svg>
+                </div>
+                <h3 class="sectionCard-heading">WCAG 2.2</h3>
+                <ul class="sectionCard-list sectionCard-list--normal">
+                    <li>Семантичні HTML-теги</li>
+                    <li>Контрастність 7:1 (зі стилями компоненту)</li>
+                    <li>Розмір не менший 44х44 px (зі стилями компоненту)</li>
+                </ul>
+            </div>
+            <div class="section-card sectionCard sectionCard--feature">
+                <div class="sectionCard-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" viewBox="0 0 16 16">
+                      <path d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                      <path d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25z"/>
+                    </svg>
+                </div>
+                <h3 class="sectionCard-heading">Клавіатурна навігація</h3>
+                <ul class="sectionCard-list sectionCard-list--normal">
+                    <li>Навігація за допомогою клавіатури</li>
+                    <li>Видимий індикатор фокусу</li>
+                    <li>Неактивний елемент виключений з порядку табуляції</li>
+                </ul>
+            </div>
+            <div class="section-card sectionCard sectionCard--feature">
+                <div class="sectionCard-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" viewBox="0 0 16 16">
+                      <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
+                      <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
+                      <path d="M10.025 8a4.5 4.5 0 0 1-1.318 3.182L8 10.475A3.5 3.5 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.5 4.5 0 0 1 10.025 8M7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11"/>
+                    </svg>
+                </div>
+                <h3 class="sectionCard-heading">Підтримка скринрідерів</h3>
+                <ul class="sectionCard-list sectionCard-list--normal">
+                    <li>Навігація за допомогою скринрідера</li>
+                    <li>Елементи коректно озвучуються скринрідером</li>
+                    <li>Можливість додавати aria-label</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="section section-even">
+    <div class="container">
+        <h2 class="section-heading">Хочете використовувати цей компонент у своєму проєкті?</h2>
+        <p class="section-description">Заповніть форму, і ми повідомимо вас, коли його можна буде придбати.</p>
+
+        
+
+        
+
+        
+            <div class="section-buttons">
+                <a href="https://forms.gle/nDJDB34Q2o2HoUpk7" class="button buttonPrimary" target="_blank">Хочу такий компонент</a>
+            </div>
+        
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-topContent">
+            <div>
+                
+    
+
+
+        <div class="logo">
+            <a
+                href="/ua/"
+                class="logo-link"
+                aria-label="accessible-ui: Головна сторінка"
+            >accessible-ui</a>
+        </div>
+
+
+                <div class="footer-slogan">Створюємо доступний UI</div>
+
+                <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <a href="/components/accessible-button-and-link/"
+               hreflang="en"
+               lang="en"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Перейти на англійську версію"
+               title="Перейти на англійську версію"
+            >EN</a>
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">UA</span>
+        
+    </div>
+</div>
+            </div>
+
+            <div class="footer-topRightContent">
+
+                
+
+                <nav class="footerNav" aria-label="Навігація в підвалі">
+
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Навігація</span>
+                    <ul class="footerNav-list">
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/components/"
+                               
+                               >Компоненти</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/services/"
+                               
+                               >Сервіси</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/ua/blog/"
+                               
+                               >Блог</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="footerNav" aria-label="Юридична інформація">
+
+                    
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Юридична інформація</span>
+                    <ul>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/privacy-policy/"
+                                
+                            >Політика конфіденційності</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/cookie-policy/"
+                                
+                            >Політика файлів cookie</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/terms-of-service/"
+                                
+                            >Умови надання послуг</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/ua/legal_information/"
+                                
+                            >Юридична інформація</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-copyrights">&copy; accessible-ui | Всі права захищено</div>
+    </div>
+</footer>
+
+
+    <section
+    id="cookie-banner"
+    class="cookieBanner"
+    role="region"
+    aria-label="Повідомлення про використання файлів cookie"
+>
+    <div class="container cookieBanner-content">
+        <p>
+            Сайт використовує лише необхідні cookie. Продовжуючи, ви погоджуєтеся з 
+            <a
+                href="/ua/cookie-policy/"
+            >Політикою файлів cookie</a>.
+          </p>
+          <button
+            id="cookie-ok-btn"
+            class="button buttonPrimary cookieBanner-button"
+            aria-label="Закрити повідомлення про використання файлів cookie"
+          >
+            OK
+          </button>
+    </div>
+</section>
+
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

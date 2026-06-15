@@ -7,6 +7,7 @@
   --color-background: #ffffff;
   --color-surface: #f9fafb;
   --color-border: #a8abaf;
+  --color-border-secondary: #dcdcdc;
   /*--color-border: #d1d5db;*/
 
   /* Text Colors */
@@ -360,6 +361,10 @@ h1.section-heading {
   justify-content: flex-start;
 }
 
+.section-cards--closer {
+  gap: var(--spacing-xl);
+}
+
 .section-card {
   max-width: 40%;
   min-width: 280px;
@@ -382,6 +387,11 @@ h1.section-heading {
   flex: 1 400px;
 }
 
+.cards--half .cards-item {
+  flex: 1 40%;
+  min-width: 250px;
+}
+
 .card {
   padding: var(--spacing-lg);
   background-color: var(--color-surface);
@@ -396,6 +406,12 @@ h1.section-heading {
   align-items: center;
   padding: var(--spacing-lg);
   background-color: var(--color-surface);
+}
+
+.sectionCard--left {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .sectionCard--plan {
@@ -416,9 +432,18 @@ h1.section-heading {
   background-color: var(--color-background);
 }
 
+.sectionCard--example .sectionCard-heading {
+  margin-bottom: var(--spacing-xl);
+}
+
 .sectionCard-heading {
   margin-bottom: var(--spacing-sm);
   font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-heading);
+}
+
+.sectionCard-heading-link {
+  color: var(--color-text-primary);
 }
 
 .sectionCard-description {
@@ -441,12 +466,18 @@ h1.section-heading {
   font-size: var(--font-size-body-lg); 
 }
 
+
 .sectionCard-list {
   flex-grow: 1;
   list-style: disc;
   padding-left: var(--spacing-md);
   color: var(--color-text-secondary);
   font-size: var(--font-size-body-sm);
+}
+
+.sectionCard-list--normal {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body-md);
 }
 
 .sectionCard-list li {
@@ -458,6 +489,15 @@ h1.section-heading {
   margin-top: var(--spacing-md);
 }
 
+.sectionCard-image:not(:last-child) {
+  margin-bottom: var(--spacing-md);
+}
+
+.sectionCard-code {
+  align-self: stretch;
+  margin-bottom: var(--spacing-md);
+}
+
 .section-disclaimer {
   margin-top: var(--spacing-2xl);
   color: var(--color-text-secondary);
@@ -467,7 +507,7 @@ h1.section-heading {
 .componentCard {
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 25%;
+  max-width: 380px;
   text-align: left;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -584,7 +624,7 @@ h1.section-heading {
   list-style: decimal;
 }
 
-.article-list li {
+.article-list li:not(:last-child) {
   margin-bottom: var(--spacing-sm);
 }
 
@@ -715,6 +755,15 @@ h1.section-heading {
 
 .cookieBanner-button {
   flex-shrink: 0;
+}
+
+.screenshot,
+.codeSnippet {
+  padding: var(--spacing-md);
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--radius-md);
 }
 
 
