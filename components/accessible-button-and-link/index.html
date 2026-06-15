@@ -198,15 +198,18 @@
     <div class="container article article--thin">
         <h2 class="section-heading">Key features</h2>
         
-        <ul class="article-list card">
-            <li>Automatically chooses between &lt;button&gt; and &lt;a&gt; based on the provided props</li>
-            <li>Written in TypeScript and suitable for modern projects</li>
-            <li>Provides correct disabled state behavior</li>
-            <li>Appearance is independent of functionality and controlled through props</li>
-            <li>Supports custom styles through your own classes</li>
-            <li>Ensures accessibility and complies with WCAG 2.2 requirements</li>
-            <li>Supports keyboard navigation and screen readers</li>
-        </ul>
+        <div class="card">
+            <ul class="article-list">
+                <li>Automatically chooses between &lt;button&gt; and &lt;a&gt; based on the provided props</li>
+                <li>Written in TypeScript and suitable for modern projects</li>
+                <li>Provides correct disabled state behavior</li>
+                <li>Appearance is independent of functionality and controlled through props</li>
+                <li>Supports custom styles through your own classes</li>
+                <li>Ensures accessibility and complies with WCAG 2.2 requirements</li>
+                <li>Supports keyboard navigation and screen readers</li>
+            </ul>
+        </div>
+        
     </div>
 </section>
 
@@ -221,7 +224,7 @@
             <div class="sectionCard-code codeSnippet">
                 <pre><code>&lt;Action
   onClick={() =&gt; {
-    // your code to open modal
+    // your code
   }}
 &gt;
   Open modal
@@ -245,7 +248,7 @@
             <div class="sectionCard-code codeSnippet">
                 <pre><code>&lt;Action
   onClick={() =&gt; {
-    // your code to open modal
+    // your code
   }}
   disabled
 &gt;

@@ -772,6 +772,7 @@ h1.section-heading {
     padding: 0 var(--spacing-md);
   }
 
+  .sectionCard,
   .card {
     padding: var(--spacing-md);
   }
@@ -786,5 +787,9 @@ h1.section-heading {
 
   .blogCard-image {
     flex-shrink: 1;
+  }
+
+  .section-cards {
+    gap: var(--spacing-md);
   }
 }

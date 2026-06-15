@@ -198,15 +198,18 @@
     <div class="container article article--thin">
         <h2 class="section-heading">Що вміє компонент</h2>
         
-        <ul class="article-list card">
-            <li>Автоматично обирає між &lt;button&gt; і &lt;a&gt; на основі переданих пропсів</li>
-            <li>Написаний на TypeScript і підійде для всіх сучасних проєктів</li>
-            <li>Підтримує коректну поведінку неактивного (disabled) стану</li>
-            <li>Зовнішній вигляд не залежить від функціоналу, а визначається через пропси</li>
-            <li>Підтримує додавання кастомних стилів через ваші класи</li>
-            <li>Забезпечує вебдоступність та відповідає вимогам WCAG 2.2</li>
-            <li>Підтримує керування за допомогою клавіатури та скринрідера</li>
-        </ul>
+        <div class="card">
+            <ul class="article-list">
+                <li>Автоматично обирає між &lt;button&gt; і &lt;a&gt; на основі переданих пропсів</li>
+                <li>Написаний на TypeScript і підійде для всіх сучасних проєктів</li>
+                <li>Підтримує коректну поведінку неактивного (disabled) стану</li>
+                <li>Зовнішній вигляд не залежить від функціоналу, а визначається через пропси</li>
+                <li>Підтримує додавання кастомних стилів через ваші класи</li>
+                <li>Забезпечує вебдоступність та відповідає вимогам WCAG 2.2</li>
+                <li>Підтримує керування за допомогою клавіатури та скринрідера</li>
+            </ul>
+        </div>
+        
     </div>
 </section>
 
@@ -221,7 +224,7 @@
             <div class="sectionCard-code codeSnippet">
                 <pre><code>&lt;Action
   onClick={() =&gt; {
-    // your code to open modal
+    // your code
   }}
 &gt;
   Open modal
@@ -245,7 +248,7 @@
             <div class="sectionCard-code codeSnippet">
                 <pre><code>&lt;Action
   onClick={() =&gt; {
-    // your code to open modal
+    // your code
   }}
   disabled
 &gt;
