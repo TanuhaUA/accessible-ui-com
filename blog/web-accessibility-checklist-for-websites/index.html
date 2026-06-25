@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Web Accessibility Checklist for Websites | Accessible-UI</title>
+
+    <meta name="description" content="A practical website accessibility checklist covering HTML structure, keyboard navigation, forms, contrast, images, and other key WCAG requirements. Helps quickly evaluate website accessibility.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+
+    
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://accessible-ui.com/blog/web-accessibility-checklist-for-websites/">
+    
+
+    <link rel="alternate" hreflang="en" href="https://accessible-ui.com/blog/web-accessibility-checklist-for-websites/">
+    <link rel="alternate" hreflang="uk" href="https://accessible-ui.com/ua/blog/web-accessibility-checklist-for-websites/">
+    <link rel="alternate" hreflang="x-default" href="https://accessible-ui.com/blog/web-accessibility-checklist-for-websites/">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <meta property="og:title" content="Web Accessibility Checklist for Websites | Accessible-UI">
+    <meta property="og:description" content="A practical website accessibility checklist covering HTML structure, keyboard navigation, forms, contrast, images, and other key WCAG requirements. Helps quickly evaluate website accessibility.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accessible-ui.com/blog/web-accessibility-checklist-for-websites/">
+    <meta property="og:image" content="https://accessible-ui.com/assets/images/blog/web-accessibility-checklist-for-websites/title.jpg">
+
+</head>
+<body>
+    <a href="#main-content" class="button buttonPrimary skip-link">Skip to main content</a>
+
+    <header class="header">
+    <div class="container headerLayout">
+        
+    
+
+
+        <div class="logo">
+            <a
+                href="/"
+                class="logo-link"
+                aria-label="accessible-ui: Homepage"
+            >accessible-ui</a>
+        </div>
+
+
+        
+        
+        
+        
+
+        <nav class="headerNav" aria-label="Main">
+            <ul class="headerNav-list">
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/components/"
+                       
+                       >Components</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link"
+                       href="/services/"
+                        
+                       >Services</a>
+                </li>
+                <li>
+                    <a
+                       class="headerNav-link headerNav-link--current"
+                       href="/blog/"
+                        aria-current="page"
+                       >Blog</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">EN</span>
+        
+
+        
+            <a href="/ua/blog/web-accessibility-checklist-for-websites/"
+               hreflang="uk"
+               lang="uk"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Switch to Ukrainian version"
+               title="Switch to Ukrainian version"
+           >UA</a>
+        
+    </div>
+</div>
+    </div>
+</header>
+
+
+    <main id="main-content" tabindex="-1">
+        
+
+
+
+
+
+
+
+  <nav class="container breadcrumbs" aria-label="Breadcrumbs">
+    <ol>
+      <li>
+        <a href="/">Home</a>
+      </li>
+
+      <li>
+        
+          <a href="/blog/">Blog</a>
+        
+      </li>
+      
+      
+        <li>
+          
+            <span aria-current="page">Web Accessibility Checklist for Websites</span>
+          
+        </li>
+      
+    </ol>
+  </nav>
+
+
+
+<section class="section">
+    <div class="container article">
+        <h1 class="article-heading">Web Accessibility Checklist for Websites</h1>
+
+        <div class="article-images">
+            <img
+                width="900"
+                src="/assets/images/blog/web-accessibility-checklist-for-websites/title.jpg"
+                alt="Dashboard interface for a web accessibility audit, featuring abstract charts, progress indicators, and task lists represented by geometric shapes and lines."
+                class="article-image"
+            >
+        </div>
+
+        <p class="article-intro">Most websites have accessibility issues. Even websites with a high level of accessibility usually have room for improvement.</p>
+        <p class="article-intro">At the same time, not all companies are ready to order a comprehensive web accessibility audit.</p>
+        <p class="article-intro">If your website has not undergone an accessibility audit yet and you would like to perform an initial evaluation yourself, this checklist will help you conduct a basic accessibility review and identify the most common issues.</p>
+
+        <p class="article-intro article-list-heading"><b>This web accessibility checklist will be useful for:</b></p>
+        <ul class="article-list">
+            <li>Website owners</li>
+            <li>CEOs, CTOs, and managers</li>
+            <li>Product teams</li>
+            <li>Developers</li>
+            <li>QA engineers</li>
+            <li>Designers</li>
+            <li>Anyone interested in web accessibility or looking to perform a basic accessibility evaluation</li>
+        </ul>
+
+        <p class="article-intro">
+            Read more about
+            <a href="/blog/who-needs-a-web-accessibility-audit/">
+                Who Needs a Web Accessibility Audit</a>
+                in our blog article.
+        </p>
+
+        <p class="article-intro article-list-heading"><b>The checklist includes reviewing:</b></p>
+        <ul class="article-list">
+            <li>HTML page structure</li>
+            <li>Keyboard accessibility</li>
+            <li>Forms, instructions, and error messages</li>
+            <li>Color contrast and text readability</li>
+            <li>Images and other media elements</li>
+            <li>Interactive elements</li>
+        </ul>
+
+        <p class="article-intro">We will examine each of these points in more detail below.</p>
+        <p class="article-intro">This checklist is not a substitute for a full accessibility audit. It will help you understand what to pay attention to when you do not know where to start.</p>
+        <p class="article-intro">
+            We will be happy to conduct a 
+            <a href="/services/">
+                comprehensive web accessibility audit of your website</a>.
+        </p>
+
+        <p class="article-intro">
+            To request an audit, please fill out 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpNEkNWxuvV33mI-D6VDWckGbxWMpSt8e2FhGLxWt_z8IxVw/viewform?usp=dialog" target="_blank">
+                the form</a>.
+        </p>
+
+        <p class="article-intro">Now let&#39;s look at each stage of a basic website accessibility evaluation in more detail.</p>
+
+        <h2 class="article-h2">Page Structure (HTML and Semantics)</h2>
+        <p class="article-text">A proper HTML document structure is extremely important for web accessibility. It helps screen reader users quickly navigate the page and find the information they need.</p>
+        <p class="article-text article-list-heading"><b>What should be checked:</b></p>
+        <ul class="article-list">
+            <li>The lang attribute in the &lt;html&gt; element and its value</li>
+            <li>A valid and unique &lt;title&gt; for the page</li>
+            <li>A clear first-level heading (&lt;h1&gt;) describing the page</li>
+            <li>Whether the heading hierarchy (&lt;h2&gt;-&lt;h6&gt;) follows a logical structure</li>
+            <li>Semantic elements, including structural elements (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;) and interactive elements (&lt;button&gt;, &lt;a&gt;)</li>
+        </ul>
+
+        <p class="article-text">For example, if the language attribute is missing, screen reader users may experience difficulties understanding the content. If the page lacks a title or h1, or if they are not unique, it becomes harder to understand which page is currently open. Missing or incorrectly used semantic elements make navigation more difficult and may also affect SEO and how search engines understand the page.</p>
+        <p class="article-text">Therefore, a proper page structure is one of the pillars of web accessibility.</p>
+
+        <h2 class="article-h2">Keyboard Accessibility</h2>
+
+        <p class="article-text">Testing a website using only a keyboard is an essential part of accessibility testing. WCAG Success Criterion 2.1.1 requires websites to be operable without a mouse. At the same time, using a mouse, touchpad, or other input devices is not prohibited.</p>
+        <p class="article-text">Keyboard users may include people with hand injuries, people with their hands occupied, individuals with motor or visual impairments, and those who do not currently have a mouse available.</p>
+
+        <p class="article-text article-list-heading"><b>What should be checked:</b></p>
+        <ul class="article-list">
+            <li>Whether user scenarios can be completed using only the keyboard (Tab key and others)</li>
+            <li>Whether the focus indicator is clearly visible on every focused element</li>
+            <li>Whether the tab order is logical and navigation between elements is consistent</li>
+            <li>Whether there are no keyboard traps and it is always possible to move to the next element</li>
+            <li>Whether modal dialogs can be closed and operated using the keyboard</li>
+        </ul>
+
+        <p class="article-text article-list-heading">Keyboard shortcuts that are useful when testing a website with a keyboard:</p>
+        <ul class="article-list">
+            <li>Tab — move to the next element (link, button, field)</li>
+            <li>Shift + Tab — move to the previous interactive element</li>
+            <li>Enter — activate a link or press a button</li>
+            <li>Space — activate a checkbox or radio button</li>
+        </ul>
+
+        <h2 class="article-h2">Forms and Messages</h2>
+
+        <p class="article-text">Forms are often key elements in a user flow. Form accessibility is important for businesses because users frequently interact with products through forms: registering, submitting contact information, placing orders, or sending requests. Therefore, checking form accessibility is an essential part of a web accessibility audit.</p>
+
+        <p class="article-text article-list-heading"><b>What should be checked:</b></p>
+        <ul class="article-list">
+            <li>Visible labels rather than placeholders only</li>
+            <li>Clear and accurate field labels</li>
+            <li>A visible focus indicator on active fields</li>
+            <li>Error messages in forms</li>
+            <li>Complete and understandable error descriptions</li>
+            <li>Clear instructions for fixing errors</li>
+            <li>Button names and how they are announced by screen readers</li>
+        </ul>
+
+        <p class="article-text">Given the importance of forms for business goals, their accessibility deserves special attention.</p>
+
+        <h2 class="article-h2">Contrast and Readability</h2>
+
+        <p class="article-text">Checking visual accessibility is one of the stages of a web accessibility audit. A common issue is insufficient contrast between text and background colors. For example, light gray text on a white background or dark text on a dark background is frequently encountered.</p>
+        <p class="article-text">For people with visual impairments or users viewing a screen in bright lighting conditions, such text may be difficult or impossible to read. As a result, users may miss important information on the website. That is why checking contrast ratios is very important. Besides contrast, this area of testing includes other aspects as well.</p>
+
+        <p class="article-text article-list-heading"><b>What should be checked:</b></p>
+        <ul class="article-list">
+            <li>Whether text and background colors have sufficient contrast (minimum 4.5:1 for normal text)</li>
+            <li>Whether the text size is sufficient and the font is readable</li>
+            <li>Visibility and contrast of focus outlines on focused elements</li>
+            <li>Whether color is not the only means of conveying information</li>
+            <li>Whether users can zoom the page or text without losing information or functionality</li>
+        </ul>
+
+        <h2 class="article-h2">Images and Media</h2>
+
+        <p class="article-text">One of the best-known accessibility rules is that images should have an alt attribute in the &lt;img&gt; tag. In addition, alternative text should provide an appropriate description within its context. Decorative images should have an empty alt attribute. As for other media elements, videos with audio should include captions, and audio content should have a text transcript.</p>
+
+        <p class="article-text article-list-heading"><b>What should be checked:</b></p>
+        <ul class="article-list">
+            <li>Alternative descriptions for meaningful images</li>
+            <li>Correct alt attribute values in &lt;img&gt;</li>
+            <li>Empty alt=&quot;&quot; attributes for decorative images</li>
+            <li>Captions for videos with audio</li>
+            <li>Text transcripts for audio content</li>
+        </ul>
+
+        <h2 class="article-h2">Interactive Elements</h2>
+
+        <p class="article-text">Interactive elements should be accessible to all website visitors. These include buttons, links, form fields, dropdowns, menus, and similar controls.</p>
+
+        <p class="article-text article-list-heading"><b>What should be checked:</b></p>
+        <ul class="article-list">
+            <li>Whether buttons are implemented using semantic elements (for example, &lt;button&gt; instead of &lt;div&gt;)</li>
+            <li>Whether links use the &lt;a&gt; tag and contain an href attribute</li>
+            <li>Whether menus, dropdowns, and modal dialogs work with the keyboard</li>
+            <li>Whether buttons have clear, descriptive text and are announced correctly by screen readers</li>
+            <li>Whether icon-only buttons and other elements without visible text have accessible names (for example, aria-label)</li>
+        </ul>
+
+        <p class="article-intro">Using this checklist, you can test the most important aspects of accessibility. Although these checks are not a replacement for a full audit, they can help you quickly understand the current state of your product.</p>
+        
+        <p class="article-intro">
+            For a more comprehensive assessment, it is worth conducting a full web accessibility audit. 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpNEkNWxuvV33mI-D6VDWckGbxWMpSt8e2FhGLxWt_z8IxVw/viewform?usp=dialog" target="_blank">
+                Contact us</a>
+             — we will help you perform a complete accessibility review of your website.
+        </p>
+        
+        <p class="article-intro">
+            You may also find this article from our blog useful 
+            <a href="/blog/how-to-prepare-website-for-web-accessibility-audit/">
+                How to Prepare a Website for a Web Accessibility Audit</a>.
+        </p>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="section section-even">
+    <div class="container">
+        <h2 class="section-heading">Want to improve your website’s accessibility?</h2>
+        <p class="section-description">Submit a request with a brief description of your project and goals, and we’ll get in touch.</p>
+
+        
+
+        
+
+        
+            <div class="section-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpNEkNWxuvV33mI-D6VDWckGbxWMpSt8e2FhGLxWt_z8IxVw/viewform?usp=dialog" class="button buttonPrimary" target="_blank">Submit a request</a>
+            </div>
+        
+    </div>
+</section>
+
+
+<section class="section ">
+    <div class="container">
+        <h2 class="section-heading">Our services</h2>
+        <div class="section-cards">
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Accessible UI components</h3>
+                <p class="sectionCard-description">Reusable, accessible UI components built with semantic HTML, keyboard support, and screen reader compatibility.</p>
+                <a
+                    href="/components/"
+                    class="button buttonSecondary sectionCard-button"
+                >View components</a>
+            </div>
+
+            <div class="section-card sectionCard">
+                <h3 class="sectionCard-heading">Accessibility Services</h3>
+                <p class="sectionCard-description">Practical accessibility audits, consultations, and support for product teams, designers, and developers</p>
+                <a
+                    href="/services/"
+                    class="button buttonSecondary sectionCard-button"
+                >Explore our services</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-topContent">
+            <div>
+                
+    
+
+
+        <div class="logo">
+            <a
+                href="/"
+                class="logo-link"
+                aria-label="accessible-ui: Homepage"
+            >accessible-ui</a>
+        </div>
+
+
+                <div class="footer-slogan">Make accessible UI</div>
+
+                <div class="langSwitcher">
+    <div class="langSwitcher-nav">
+        
+
+        
+        
+
+        
+            <span class="langSwitcher-item langSwitcher-current">EN</span>
+        
+
+        
+            <a href="/ua/blog/web-accessibility-checklist-for-websites/"
+               hreflang="uk"
+               lang="uk"
+               class="langSwitcher-item langSwitcher-link"
+               aria-label="Switch to Ukrainian version"
+               title="Switch to Ukrainian version"
+           >UA</a>
+        
+    </div>
+</div>
+            </div>
+
+            <div class="footer-topRightContent">
+
+                
+
+                <nav class="footerNav" aria-label="Footer navigation">
+
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Navigation</span>
+                    <ul class="footerNav-list">
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/components/"
+                               
+                               >Components</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link"
+                               href="/services/"
+                               
+                               >Services</a>
+                        </li>
+                        <li>
+                            <a
+                               class="footerNav-link footerNav-link--current"
+                               href="/blog/"
+                               aria-current="page"
+                               >Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="footerNav" aria-label="Legal navigation">
+
+                    
+                    
+                    
+                    
+
+                    <span aria-hidden="true">Legal</span>
+                    <ul>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/privacy-policy/"
+                                
+                            >Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/cookie-policy/"
+                                
+                            >Cookie Policy</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/terms-of-service/"
+                                
+                            >Terms of Service</a>
+                        </li>
+                        <li>
+                            <a
+                                class="footerNav-link"
+                                href="/legal_information/"
+                                
+                            >Legal Information</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-copyrights">&copy; accessible-ui | All rights reserved</div>
+    </div>
+</footer>
+
+
+    <section
+    id="cookie-banner"
+    class="cookieBanner"
+    role="region"
+    aria-label="Cookie usage notification"
+>
+    <div class="container cookieBanner-content">
+        <p>
+            This site uses strictly necessary cookies. By continuing, you agree to our 
+            <a
+                href="/cookie-policy/"
+            >Cookie Policy</a>.
+          </p>
+          <button
+            id="cookie-ok-btn"
+            class="button buttonPrimary cookieBanner-button"
+            aria-label="Dismiss the cookie usage notification"
+          >
+            OK
+          </button>
+    </div>
+</section>
+
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
